@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Ubuntu:wght@400;700&display=swap');
 
 body {
-  background-color: #ededed;
+  background-color: #1F2228;
 }
 
 input, button, select {
@@ -24,4 +24,24 @@ input, button, select {
 ::-webkit-scrollbar-thumb {
   background-color: #1B3142;
   border-radius: 5px;
+}
+
+.textGradient {
+  background: -webkit-linear-gradient(#EB6B5B, #ECBAF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bgShadow {
+  background: linear-gradient(180deg, #EB6B5B 0%, #ECBAF6 100%);
+  filter: blur(120px);
+  border-radius: 50%;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+}
+
+.linearGradient {
+  background: linear-gradient(to right, #EB6B5B 0, #ECBAF6 90%);
 }

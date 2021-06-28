@@ -1,9 +1,13 @@
 import React from "react";
-import 'tailwindcss/tailwind.css';
-import '../public/styles/utilityStyles.scss';
+import "rc-drawer/assets/index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../public/styles/customStyles.scss";
+import "../public/styles/utilityStyles.scss";
+import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
