@@ -173,7 +173,7 @@ function Header() {
         open={connectWalletOpen}
         onCloseModal={() => setConnectWalletOpen(false)}
       />
-      <header className="flex justify-between items-center px-6 py-14 md:px-25 md:py-15">
+      <header className="flex justify-between items-center px-6 py-14 md:px-24 md:py-14">
         <div
           className="flex justify-between items-center w-full"
           style={{ maxWidth: 367 }}
