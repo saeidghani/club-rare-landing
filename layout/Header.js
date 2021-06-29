@@ -2,7 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import routes from "../constants/routes";
-import MenuDrawer from "../components/common/MenuDrawer";
+//import MenuDrawer from "../components/common/MenuDrawer";
+import MenuDrawer from "rc-drawer";
 import ConnectWalletModal from "../components/common/ConnectWalletModal";
 
 function Header() {
@@ -140,20 +141,31 @@ function Header() {
 
   return (
     <div className="">
-      <MenuDrawer open={menuOpen} onClose={() => setMenuOpen(false)}>
-        <Logo wrapperClass="pl-6 pt-15" isOnDrawer />
-        <div className="absolute top-36 flex flex-col items-center space-y-5 w-full z-10">
-          {items.map((i) => (
-            <div
-              key={i.key}
-              className="text-18 text-white cursor-pointer"
-              onClick={i.onClick}
-            >
-              {i.title}
-            </div>
-          ))}
+      {/*<MenuDrawer
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        placement="top"
+        level={null}
+      >
+        <div
+          className="relative bg-black rounded-b-40 border border-solid border-white overflow-hidden"
+          style={{ height: 306 }}
+        >
+          <Logo wrapperClass="pl-6 pt-15" isOnDrawer />
+          <div className="absolute top-36 flex flex-col items-center space-y-5 w-full z-10">
+            {items.map((i) => (
+              <div
+                key={i.key}
+                className="text-18 text-white cursor-pointer"
+                onClick={i.onClick}
+              >
+                {i.title}
+              </div>
+            ))}
+          </div>
+          {<div className="bgShadow"></div>}
         </div>
-      </MenuDrawer>
+      </MenuDrawer>*/}
       <ConnectWalletModal
         open={connectWalletOpen}
         onCloseModal={() => setConnectWalletOpen(false)}
