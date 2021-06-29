@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from 'next/image'
 import routes from "../constants/routes";
 //import MenuDrawer from "../components/common/MenuDrawer";
 import MenuDrawer from "rc-drawer";
@@ -125,13 +126,15 @@ function Header() {
   const Logo = ({ isOnDrawer, wrapperClass }) => (
     <div className={wrapperClass}>
       <div className="flex items-center">
-        <img className="" src="/icons/logo.svg" alt="" />
+        <Image src="/icons/logo.svg" width={101} height={34} alt="" />
         <div className="" onClick={() => setMenuOpen(!isOnDrawer)}>
-          <img
+          <Image
             className={`md:hidden ml-1 cursor-pointer ${
               isOnDrawer ? "transform rotate-180" : ""
             }`}
             src="/icons/arrow.svg"
+            width={24}
+            height={24}
             alt=""
           />
         </div>
@@ -210,7 +213,7 @@ function Header() {
             onClick={() => setConnectWalletOpen(true)}
           >
             <div className="textGradient text-20">Connect</div>
-            <img src="/icons/wallet.svg" alt="wallet" />
+            <Image src="/icons/wallet.svg" width={40} height={40} alt="wallet" />
           </div>
         </div>
       </header>

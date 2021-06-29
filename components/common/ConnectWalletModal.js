@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 import Modal from "../UI/Modal";
 
 function ConnectWalletModal({ open, onCloseModal }) {
@@ -18,13 +19,13 @@ function ConnectWalletModal({ open, onCloseModal }) {
           className="rounded-12 border border-solid border-white w-full flex justify-center items-center"
           style={{ width: 239, height: 53 }}
         >
-          <img src="/images/metatask.png" alt="" />
+          <Image src="/images/metatask.png" width={102} height={32} alt="" />
         </button>
         <button
           className="mt-4 rounded-12 border border-solid border-white w-full flex justify-center items-center"
           style={{ width: 239, height: 53 }}
         >
-          <img src="/images/connectWallet.png" alt="" />
+          <Image src="/images/connectWallet.png" width={130} height={21} alt="" />
         </button>
       </div>
     </div>
