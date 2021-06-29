@@ -127,15 +127,16 @@ function Header() {
     <div className={wrapperClass}>
       <div className="flex items-center">
         <Image src="/icons/logo.svg" width={101} height={34} alt="" />
-        <div className="" onClick={() => setMenuOpen(!isOnDrawer)}>
+        <div className="md:hidden pt-2">
           <Image
-            className={`md:hidden ml-1 cursor-pointer ${
-              isOnDrawer ? "transform rotate-180" : ""
-            }`}
-            src="/icons/arrow.svg"
-            width={24}
-            height={24}
-            alt=""
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={`ml-1 cursor-pointer ${
+                  isOnDrawer ? "transform rotate-180" : ""
+              }`}
+              src="/icons/arrow.svg"
+              width={24}
+              height={24}
+              alt=""
           />
         </div>
       </div>
@@ -173,7 +174,7 @@ function Header() {
         open={connectWalletOpen}
         onCloseModal={() => setConnectWalletOpen(false)}
       />
-      <header className="flex justify-between items-center px-6 py-14 md:px-24 md:py-14">
+      <header className="flex justify-between items-center px-6 py-15 md:px-25">
         <div
           className="flex justify-between items-center w-full"
           style={{ maxWidth: 367 }}
@@ -203,16 +204,16 @@ function Header() {
           style={{ maxWidth: 207 }}
         >
           <div
-            className="hidden md:block text-white text-13 font-semibold rounded-10"
+            className="hidden md:block text-white text-13 font-semibold rounded-10 cursor-pointer"
             style={{ border: "1.5px solid #fff", padding: "4.5px 4.5px" }}
           >
             EN
           </div>
           <div
-            className="flex items-center space-x-3.5 cursor-pointer"
+            className="flex items-center cursor-pointer"
             onClick={() => setConnectWalletOpen(true)}
           >
-            <div className="textGradient text-20">Connect</div>
+            <div className="textGradient text-20 mr-3.5">Connect</div>
             <Image src="/icons/wallet.svg" width={40} height={40} alt="wallet" />
           </div>
         </div>
