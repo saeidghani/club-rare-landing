@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import Header from "./Header";
+import { useRouter } from "next/router";
 
-function Layout({children}) {
-    return (
-        <div className="min-h-screen bg-black">
-            <Header/>
-            <main className="flex flex-col items-center justify-center py-2">
-             {children}
-            </main>
-        </div>
-    );
+function Layout({ children, mainClass }) {
+  const router = useRouter();
+  const { pathname, query } = router;
+  const { walletConnected } = query;
+
+  useEffect(() => {
+    if (typeof walletConnected === undefined) {
+      router.push({
+        pathname,
+        query: { walletConnected: false },
+      });
+    }
+  }, [walletConnected]);
+
+  return (
+    <div className="min-h-screen bg-black">
+      <Header />
+      <main className={`container pb-50 ${mainClass || ""}`}>{children}</main>
+    </div>
+  );
 }
 
 export default Layout;

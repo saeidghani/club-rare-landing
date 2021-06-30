@@ -2,9 +2,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './layout/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./layout/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -13,6 +13,14 @@ module.exports = {
     },
     container: {
       center: true,
+      padding: {
+        //DEFAULT: "1rem",
+        //sm: 0,
+        /*sm: '2rem',
+        lg: '4rem',
+        xl: '3rem',
+        '2xl': '6rem',*/
+      },
     },
     extend: {
       fontFamily: {
@@ -20,7 +28,12 @@ module.exports = {
       },
       colors: {
         black: "#1F2228",
+        blue: "#1B3142",
+        lightBlue: "#4594E4",
+        gray: "#9E9E9E",
         darkGray: "#36393E",
+        darkGray2: "#35383E",
+        secondary: "#EC6F62",
       },
       fontSize: {
         8: "0.5rem",
@@ -36,11 +49,14 @@ module.exports = {
         22: "1.375rem",
         24: "1.5rem",
         26: "1.625rem",
+        28: "1.75rem",
         32: "2rem",
         34: "2.125rem",
+        46: "2.875rem",
       },
       borderRadius: {
         4: "4px",
+        8: "8px",
         10: "10px",
         12: "12px",
         16: "16px",
@@ -77,8 +93,12 @@ module.exports = {
         26: "6.5rem",
         30: "7.5rem",
         31: "7.75rem",
+        34: "8.5rem",
         36: "9rem",
         42: "10.5rem",
+        44: "11rem",
+        50: "12.5rem",
+        84: "21rem",
         100: "25rem",
         120: "30rem",
         140: "35rem",
@@ -92,6 +112,7 @@ module.exports = {
       minWidth: {
         360: "360px",
         300: "300px",
+        845: "845px",
       },
       maxHeight: { 55: "55px" },
       borderWidth: {
@@ -113,4 +134,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};

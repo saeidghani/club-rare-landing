@@ -1,22 +1,20 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from 'next/image'
+import Image from "next/image";
 import routes from "../constants/routes";
-//import MenuDrawer from "../components/common/MenuDrawer";
-import MenuDrawer from "rc-drawer";
 import ConnectWalletModal from "../components/common/ConnectWalletModal";
+import MyWalletModal from "../components/common/MyWalletModal";
 
 function Header() {
   const router = useRouter();
-  const { pathname, locale } = router;
+  const { pathname, query, locale } = router;
   const [selectedWallet, setSelectedWallet] = useState({});
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [connectWalletOpen, setConnectWalletOpen] = useState(false);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, []);
+  const [myWalletOpen, setMyWalletOpen] = useState(false);
+  const { walletConnected } = query;
+  const walletIsConnected = walletConnected === "true";
 
   const languageOptions = [
     { key: "en", title: "English", onClick: () => {} },
@@ -129,14 +127,14 @@ function Header() {
         <Image src="/icons/logo.svg" width={101} height={34} alt="" />
         <div className="md:hidden pt-2">
           <Image
-              onClick={() => setMenuOpen(!menuOpen)}
-              className={`ml-1 cursor-pointer ${
-                  isOnDrawer ? "transform rotate-180" : ""
-              }`}
-              src="/icons/arrow.svg"
-              width={24}
-              height={24}
-              alt=""
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`ml-1 cursor-pointer ${
+              isOnDrawer ? "transform rotate-180" : ""
+            }`}
+            src="/icons/arrow.svg"
+            width={24}
+            height={24}
+            alt=""
           />
         </div>
       </div>
@@ -144,12 +142,11 @@ function Header() {
   );
 
   return (
-    <div className="">
-      {/*<MenuDrawer
-        open={menuOpen}
-        onClose={() => setMenuOpen(false)}
-        placement="top"
-        level={null}
+    <div className="relative">
+      <div
+        className={`transform ease-in-out transition-all duration-300 z-30 absolute left-0 right-0 ${
+          menuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
       >
         <div
           className="relative bg-black rounded-b-40 border border-solid border-white overflow-hidden"
@@ -169,12 +166,16 @@ function Header() {
           </div>
           {<div className="bgShadow"></div>}
         </div>
-      </MenuDrawer>*/}
+      </div>
       <ConnectWalletModal
         open={connectWalletOpen}
         onCloseModal={() => setConnectWalletOpen(false)}
       />
-      <header className="flex justify-between items-center px-6 py-15 md:px-25">
+      <MyWalletModal
+        open={myWalletOpen}
+        onCloseModal={() => setMyWalletOpen(false)}
+      />
+      <header className="flex justify-between items-center py-15 container">
         <div
           className="flex justify-between items-center w-full"
           style={{ maxWidth: 367 }}
@@ -211,10 +212,23 @@ function Header() {
           </div>
           <div
             className="flex items-center cursor-pointer"
-            onClick={() => setConnectWalletOpen(true)}
+            onClick={() =>
+              walletIsConnected
+                ? setMyWalletOpen(true)
+                : setConnectWalletOpen(true)
+            }
           >
-            <div className="textGradient text-20 mr-3.5">Connect</div>
-            <Image src="/icons/wallet.svg" width={40} height={40} alt="wallet" />
+            {
+              <div className="textGradient text-20 mr-3.5">
+                {walletIsConnected ? "0x56u7i..." : "Connect"}
+              </div>
+            }
+            <Image
+              src="/icons/wallet.svg"
+              width={40}
+              height={40}
+              alt="wallet"
+            />
           </div>
         </div>
       </header>
