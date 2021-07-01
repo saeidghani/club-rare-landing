@@ -17,9 +17,11 @@ function Layout({ children, mainClass }) {
   }, [walletConnected]);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative">
       <Header />
-      <main className={`container pb-50 ${mainClass || ""}`}>{children}</main>
+      <main className={`container pb-31 lg:pb-50 ${mainClass || ""}`}>
+        {children}
+      </main>
     </div>
   );
 }

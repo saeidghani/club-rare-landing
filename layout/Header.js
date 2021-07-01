@@ -21,65 +21,6 @@ function Header() {
     { key: "kr", title: "Korean", onClick: () => {} },
   ];
 
-  const walletOptions = (isDrawer) =>
-    useMemo(() => {
-      const titleOption = {
-        key: 1,
-        title: (
-          <div
-            className={
-              isDrawer
-                ? "text-18 text-blue font-semibold mt-20"
-                : "text-18 text-blue border-b border-solid border-gray pb-2 w-full -mt-1"
-            }
-          >
-            dddddddd
-          </div>
-        ),
-        onClick: () => {},
-      };
-      const mainOptionsItems = [
-        { key: 2, title: "Balance" },
-        { key: 3, title: "Bidding Balance" },
-      ];
-      const mainOptions = mainOptionsItems.map((i) => ({
-        key: i.key,
-        title: (
-          <div
-            className={`flex justify-between items-end w-full ${
-              isDrawer ? "mt-7" : "px-4"
-            }`}
-          >
-            <div className="flex items-center space-x-3">
-              <div className="flex flex-col items-start">
-                <div className="text-14 text-gray font-semibold">{i.title}</div>
-                <div className="text-16 text-blue font-semibold">0 ETH</div>
-              </div>
-            </div>
-            <div className="text-16 text-gray font-semibold text-right">
-              $0.00
-            </div>
-          </div>
-        ),
-        onClick: () => {},
-      }));
-      const lastOption = {
-        key: mainOptions.length + 2,
-        title: (
-          <button
-            className={`text-14 text-blue font-bold border border-solid border-gray
-                        py-3 px-6 rounded-12 w-full ${
-                          isDrawer ? "mt-11" : "mx-6.5"
-                        }`}
-          >
-            ffffff
-          </button>
-        ),
-        onClick: () => {},
-      };
-      return [titleOption, ...mainOptions, lastOption];
-    }, []);
-
   const navItems = [
     { key: 1, title: "Home", href: routes.home },
     { key: 2, title: "Staking", href: routes.staking },
@@ -112,7 +53,7 @@ function Header() {
     {
       key: 2,
       title: "Home",
-      onClick: () => () => router.push(routes.home),
+      onClick: () => router.push(routes.home),
     },
     {
       key: 3,

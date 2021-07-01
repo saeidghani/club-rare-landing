@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Ubuntu:wght@400;300;700&display=swap');
 
 body {
-  //background-color: #1F2228;
-  background-color: #fff;
+  background-color: #1F2228;
 }
 
 input, button, select {
@@ -23,7 +22,7 @@ input, button, select {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: #1B3142;
+  background-color: #36393E;
   border-radius: 5px;
 }
 
@@ -48,6 +47,36 @@ input, button, select {
 }
 
 .home {
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr 480px 1fr;
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .line4 {
+    left: calc(20% - 7px);
+  }
+  .line8 {
+    right: 0;
+    left: 0;
+    top: 620px;
+    @media (max-width: 1024px) {
+      top: 494px;
+    }
+  }
+  .line9 {
+    left: 70px;
+    top: 627px;
+    @media (max-width: 1024px) {
+      top: 501px;
+    }
+  }
+  .line10 {
+    left: calc(50% - 7px);
+  }
+
   .social-nets {
     .buttons {
       max-width: 845px;
@@ -66,6 +95,4 @@ input, button, select {
     }
   }
 }
-
-
 

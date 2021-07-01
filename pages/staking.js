@@ -87,7 +87,7 @@ export default function Staking() {
       </div>
       <div className="pb-20">
         <div
-          className="relative bg-darkGray2 rounded-12 mt-12 p-9 overflow-hidden"
+          className="relative bg-darkGray2 rounded-12 mt-12 p-6 xxs:p-9 overflow-hidden"
           style={{ height: 211 }}
         >
           <div className="absolute top-0 left-0">
@@ -98,7 +98,7 @@ export default function Staking() {
           </div>
           <div className="text-20 text-white">Your Available AGOV Balance</div>
           <div className="text-24 textGradient mt-6.5">0.00 AGOV</div>
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex justify-between items-center mt-4 xxs:mt-8">
             <div className="text-white">Pending Harvest</div>
             <div className="flex z-10">
               <div className="text-white mr-1">0.000</div>
@@ -106,7 +106,7 @@ export default function Staking() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 lg:gap-x-11.5 gap-y-6.5 md:gap-y-12 mt-11.5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 lg:gap-x-11.5 gap-y-6.5 lg:gap-y-12 mt-11.5">
           {cryptoDetails?.map((d) => (
             <div className="relative">
               <div

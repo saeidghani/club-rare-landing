@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   purge: [
@@ -7,20 +8,12 @@ module.exports = {
     "./layout/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: false, // or 'media' or 'class'
+  corePlugins: {
+    container: false,
+  },
   theme: {
     fontFamily: {
       sans: ["Nunito", "sans-serif"],
-    },
-    container: {
-      center: true,
-      padding: {
-        //DEFAULT: "1rem",
-        //sm: 0,
-        /*sm: '2rem',
-        lg: '4rem',
-        xl: '3rem',
-        '2xl': '6rem',*/
-      },
     },
     extend: {
       fontFamily: {
@@ -68,6 +61,7 @@ module.exports = {
       },
       borderWidth: {
         "1.5px": "1.5px",
+        6: "6px",
       },
       opacity: {},
       spacing: {
@@ -87,6 +81,7 @@ module.exports = {
         19: "4.75rem",
         21: "5.25rem",
         22: "5.5rem",
+        22.5: "5.625rem",
         23: "5.75rem",
         24: "6rem",
         25: "6.25rem",
@@ -95,9 +90,11 @@ module.exports = {
         31: "7.75rem",
         34: "8.5rem",
         36: "9rem",
+        39: "9.75rem",
         42: "10.5rem",
         44: "11rem",
         50: "12.5rem",
+        68: "17rem",
         84: "21rem",
         100: "25rem",
         120: "30rem",
@@ -115,9 +112,6 @@ module.exports = {
         845: "845px",
       },
       maxHeight: { 55: "55px" },
-      borderWidth: {
-        6: "6px",
-      },
       screens: {},
       lineHeight: {
         12: "3rem",
@@ -126,6 +120,7 @@ module.exports = {
       },
     },
     screens: {
+      xxs: "375px",
       xs: "475px",
       ...defaultTheme.screens,
     },
@@ -133,5 +128,56 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents, theme }) {
+      const screens = theme("screens", {});
+      addComponents([
+        {
+          ".container": { width: "100%", margin: "0 auto", padding: "0 24px" },
+        },
+        {
+          [`@media (min-width: ${screens.sm})`]: {
+            ".container": {
+              "max-width": "640px",
+            },
+          },
+        },
+        {
+          [`@media (min-width: ${screens.md})`]: {
+            ".container": {
+              "max-width": "768px",
+            },
+          },
+        },
+        {
+          [`@media (min-width: ${screens.lg})`]: {
+            ".container": {
+              "max-width": "1024px",
+            },
+          },
+        },
+        {
+          [`@media (min-width: ${screens.xl})`]: {
+            ".container": {
+              "max-width": "1280px",
+            },
+          },
+        },
+        {
+          [`@media (min-width: ${screens["2xl"]})`]: {
+            ".container": {
+              "max-width": "1280px",
+            },
+          },
+        },
+        {
+          [`@media (min-width: 1700px)`]: {
+            ".container": {
+              "max-width": "1700px",
+            },
+          },
+        },
+      ]);
+    }),
+  ],
 };

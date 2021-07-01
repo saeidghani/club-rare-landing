@@ -90,7 +90,7 @@ function HotBids() {
           <Image src={bid.pic} width={276} height={260} />
         </div>
       </div>
-      <div className="rounded-t-10 rounded-b-24 bg-white mt-4 md:mt-5 p-5 flex justify-between">
+      <div className="rounded-t-10 rounded-b-24 bg-white mt-4 md:mt-5 p-4 xxs:p-5 flex justify-between">
         <div className="">
           <div className="text-16 md:text-18 font-semibold">Highest Bid:</div>
           <div className="flex items-center">
@@ -103,7 +103,7 @@ function HotBids() {
             </div>
           </div>
         </div>
-        <button className="text-16 md:text-18 text-white bg-blue rounded-10 rounded-br-24 px-7.5 py-3">
+        <button className="text-16 md:text-18 text-white bg-blue rounded-10 rounded-br-24 px-4 xxs:px-7.5 py-3">
           Place a Bid
         </button>
       </div>
@@ -125,18 +125,18 @@ function HotBids() {
       <div className="text-34 font-semibold text-white mt-31">Hot Bids</div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">
         <div
-          className="absolute top-34 left-0 md:-left-4 z-50"
+          className="absolute top-28 md:top-34 -left-2 sm:-left-10 md:-left-4 z-50"
           onClick={handlePrevArrow}
         >
           <Image src="/icons/prevArrow.svg" width={57.5} height={57.5} />
         </div>
-        <Slider className="px-6" {...settings} ref={sliderRef}>
+        <Slider className="px-4 sm:px-0 lg:px-6" {...settings} ref={sliderRef}>
           {bidCards.map((bid) => (
             <BidCard key={bid.key} bid={bid} />
           ))}
         </Slider>
         <div
-          className="absolute top-34 right-0 md:-right-4 z-50"
+          className="absolute top-28 md:top-34 -right-2 sm:-right-10 md:-right-4 z-50"
           onClick={handleNextArrow}
         >
           <Image src="/icons/nextArrow.svg" width={57.5} height={57.5} />
