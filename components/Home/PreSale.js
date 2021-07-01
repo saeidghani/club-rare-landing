@@ -10,7 +10,7 @@ export default function PreSale() {
   ];
 
   return (
-    <div className="mt-20 lg:mt-60 z-10">
+    <div className="container mt-20 lg:mt-60 z-10">
       <div className="flex justify-between">
         <div className="text-20 lg:text-34 text-white font-semibold">
           Pre Sale

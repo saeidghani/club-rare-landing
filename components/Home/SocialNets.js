@@ -10,7 +10,7 @@ function SocialNets() {
   ];
 
   return (
-    <div className="social-nets mt-32 lg:mt-84">
+    <div className="container social-nets mt-32 lg:mt-84">
       <div className="flex justify-center items-center">
         <div className="text-white text-center text-24 lg:text-34 font-semibold mr-2">
           The AGOV Community Welcomes You
@@ -30,9 +30,7 @@ function SocialNets() {
                       w-36 lg:w-44"
             style={{ height: 65 }}
           >
-            <span className="textGradient text-24">
-              {i.name}
-            </span>
+            <span className="textGradient text-24">{i.name}</span>
           </button>
         ))}
       </div>

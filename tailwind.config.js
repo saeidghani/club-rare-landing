@@ -97,6 +97,7 @@ module.exports = {
         68: "17rem",
         84: "21rem",
         100: "25rem",
+        110: "27.5rem",
         120: "30rem",
         140: "35rem",
         160: "40rem",
@@ -170,13 +171,6 @@ module.exports = {
             },
           },
         },
-        // {
-        //   [`@media (min-width: 1700px)`]: {
-        //     ".container": {
-        //       "max-width": "1700px",
-        //     },
-        //   },
-        // },
       ]);
     }),
   ],

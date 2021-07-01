@@ -75,7 +75,7 @@ export default function Staking() {
   ];
 
   return (
-    <Layout mainClass="staking relative">
+    <Layout mainClass="staking relative container">
       <div className="flex justify-center">
         <Image src="/images/staking.svg" width={192} height={148} />
       </div>

@@ -86,7 +86,7 @@ function HotBids() {
           <div className="">{bid.name}</div>
           <div className="opacity-75">{bid.timer}</div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center slider-pic pt-8">
           <Image src={bid.pic} width={276} height={260} />
         </div>
       </div>
@@ -121,7 +121,7 @@ function HotBids() {
   };
 
   return (
-    <div>
+    <div className="hot-birds container">
       <div className="text-34 font-semibold text-white mt-31">Hot Bids</div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">
         <div

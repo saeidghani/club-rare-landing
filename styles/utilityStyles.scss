@@ -77,6 +77,27 @@ input, button, select {
     left: calc(50% - 7px);
   }
 
+  .hot-birds {
+    .slider-pic {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .features {
+    @media (min-width: 1024px) {
+      max-width: 1024px;
+      margin: 274px auto 0;
+      padding: 0 24px;
+    }
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+      margin: 274px auto 0;
+      padding: 0 24px;
+    }
+  }
+
   .social-nets {
     button{
       background: linear-gradient(#35383D, #35383D) padding-box, linear-gradient(98.8deg, #EC6F62 0%, #A97C9A 97.17%) border-box;

@@ -1,14 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 export default function Home({ activeLang, onSetActiveLang }) {
+  const { t } = useTranslation("footer");
   const langOptions = [
     { key: 1, title: "Korean Lightpaper" },
     { key: 2, title: "English Lightpaper" },
   ];
 
   return (
-    <div className="banner justify-items-center items-center">
+    <div className="banner container justify-items-center items-center">
       <div className="mt-7 md:mt-0">
         <div
           className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu"

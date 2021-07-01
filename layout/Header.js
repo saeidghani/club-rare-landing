@@ -1,15 +1,17 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import routes from "../constants/routes";
 import ConnectWalletModal from "../components/common/ConnectWalletModal";
 import MyWalletModal from "../components/common/MyWalletModal";
+import Dropdown from "../components/UI/Dropdown";
 
 function Header() {
   const router = useRouter();
   const { pathname, query, locale } = router;
   const [selectedWallet, setSelectedWallet] = useState({});
+  const [selectedLang, setSelectedLang] = useState({});
   const [menuOpen, setMenuOpen] = useState(false);
   const [connectWalletOpen, setConnectWalletOpen] = useState(false);
   const [myWalletOpen, setMyWalletOpen] = useState(false);
@@ -17,9 +19,21 @@ function Header() {
   const walletIsConnected = walletConnected === "true";
 
   const languageOptions = [
-    { key: "en", title: "English", onClick: () => {} },
-    { key: "kr", title: "Korean", onClick: () => {} },
+    {
+      key: "en",
+      title: "English",
+      onClick: () => router.push(pathname, pathname, { locale: "en" }),
+    },
+    {
+      key: "kr",
+      title: "Korean",
+      onClick: () => router.push(pathname, pathname, { locale: "kr" }),
+    },
   ];
+
+  useEffect(() => {
+    setSelectedLang(locale === "en" ? languageOptions[0] : languageOptions[1]);
+  }, []);
 
   const navItems = [
     { key: 1, title: "Home", href: routes.home },
@@ -63,8 +77,8 @@ function Header() {
   ];
 
   const Logo = ({ isOnDrawer, wrapperClass }) => (
-    <div className={wrapperClass}>
-      <div className="flex items-center">
+    <div className={wrapperClass} onClick={() => router.push(routes.home)}>
+      <div className="flex items-center cursor-pointer">
         <Image src="/icons/logo.svg" width={101} height={34} alt="" />
         <div className="md:hidden pt-2">
           <Image
@@ -145,11 +159,31 @@ function Header() {
           className="flex justify-end md:justify-between items-center w-full"
           style={{ maxWidth: 207 }}
         >
-          <div
-            className="hidden md:block text-white text-13 font-semibold rounded-10 cursor-pointer"
-            style={{ border: "1.5px solid #fff", padding: "4.5px 4.5px" }}
-          >
-            EN
+          <div className="hidden lg:block">
+            <Dropdown
+              title={
+                <div className="relative">
+                  <Image
+                    src="/icons/roundSquare.svg"
+                    width={34}
+                    height={34}
+                    alt="round square"
+                  />
+                  <span className="absolute top-2 left-2 text-white text-13 font-semibold">
+                    {locale.toUpperCase()}
+                  </span>
+                </div>
+              }
+              items={languageOptions}
+              displayChevronDown={false}
+              width="w-18"
+              selected={selectedLang}
+              onSelect={(i) => setSelectedLang(i)}
+              menuButtonClass="justify-center px-4 -mt-1"
+              menuItemsClass="bg-white absolute focus:outline-none top-9 -left-5 w-28 rounded-32 shadow-lg pt-2 pb-4"
+              menuItemClass="group flex justify-center rounded-40 items-center w-full px-2 pt-2 font-semibold text-center text-gray focus:outline-none"
+              selectedItemClass="text-blue"
+            />
           </div>
           <div
             className="flex items-center cursor-pointer"

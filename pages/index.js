@@ -27,10 +27,10 @@ export default function Home() {
       <div className="hidden lg:block absolute top-21 line4">
         <Image src="/images/line4.svg" width={15} height={162} />
       </div>
-      <div className="absolute top-0" style={{ left: "65.2%" }}>
+      <div className="absolute top-0" style={{ left: "64.4%" }}>
         <Image src="/images/line5.svg" width={1} height={401} />
       </div>
-      <div className="hidden lg:block absolute" style={{ top: 303, right: 0 }}>
+      <div className="hidden lg:block absolute" style={{ top: 393, right: 0 }}>
         <Image src="/images/line6.svg" width={483} height={1} />
       </div>
       <div
