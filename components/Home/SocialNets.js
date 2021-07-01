@@ -26,11 +26,13 @@ function SocialNets() {
         {socialNetNames?.map((i) => (
           <button
             key={i.key}
-            className="rounded-12 border border-solid border-secondary
-                     bg-white bg-opacity-20 textGradient w-36 lg:w-44"
+            className="rounded-12 
+                      w-36 lg:w-44"
             style={{ height: 65 }}
           >
-            {i.name}
+            <span className="textGradient text-24">
+              {i.name}
+            </span>
           </button>
         ))}
       </div>

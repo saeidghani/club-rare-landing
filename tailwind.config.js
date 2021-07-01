@@ -170,13 +170,13 @@ module.exports = {
             },
           },
         },
-        {
-          [`@media (min-width: 1700px)`]: {
-            ".container": {
-              "max-width": "1700px",
-            },
-          },
-        },
+        // {
+        //   [`@media (min-width: 1700px)`]: {
+        //     ".container": {
+        //       "max-width": "1700px",
+        //     },
+        //   },
+        // },
       ]);
     }),
   ],

@@ -1,5 +1,4 @@
 import React from "react";
-import "rc-drawer/assets/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/spinner.css";

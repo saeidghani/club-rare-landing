@@ -91,7 +91,7 @@ export default function Staking() {
           style={{ height: 211 }}
         >
           <div className="absolute top-0 left-0">
-            <Image src="/images/shape4.svg" width={834} height={72} />
+            <Image src="/images/shape4.svg" width={834} height={77} />
           </div>
           <div className="absolute -bottom-2 right-0">
             <Image src="/images/shape5.svg" width={804} height={50} />

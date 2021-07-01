@@ -78,6 +78,10 @@ input, button, select {
   }
 
   .social-nets {
+    button{
+      background: linear-gradient(#35383D, #35383D) padding-box, linear-gradient(98.8deg, #EC6F62 0%, #A97C9A 97.17%) border-box;
+      border: solid 1px transparent;
+    }
     .buttons {
       max-width: 845px;
       @media (max-width: 768px) {
