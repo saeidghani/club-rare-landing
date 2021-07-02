@@ -18,11 +18,11 @@ export default function Banner({ activeLang, onSetActiveLang }) {
           className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu"
           style={{ lineHeight: 1.25 }}
         >
-          {t[locale].banner.title}
+          {t[locale].banner.title.part1} <br /> {t[locale].banner.title.part2}
           <br /> <span className="font-bold">Club</span> Rare
         </div>
         <div
-          className="text-white mt-6 text-center lg:text-left"
+          className="text-white mt-6 text-center opacity-75 lg:text-left"
           style={{ lineHeight: 1.35 }}
         >
           {t[locale].banner.text}

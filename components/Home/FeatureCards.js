@@ -53,7 +53,7 @@ function FeatureCards() {
         </>
       ) : (
         <>
-          <div className="absolute top-0 left-0">
+          <div className="absolute top-0 -left-1">
             <Image
               src="/images/shape6.svg"
               width={28}
@@ -79,8 +79,12 @@ function FeatureCards() {
           </div>
         </>
       )}
-      <div className="text-center text-24 lg:text-28 font-bold">{title}</div>
-      <div className="text-center text-16 lg:text-20 mt-4.5">{text}</div>
+      <div className="text-center lg:text-left text-24 lg:text-28 font-bold">
+        {title}
+      </div>
+      <div className="text-center lg:text-left text-16 lg:text-20 mt-4.5">
+        {text}
+      </div>
     </div>
   );
 

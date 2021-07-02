@@ -65,6 +65,12 @@ export default function Home() {
       <div className="hidden lg:block absolute line10" style={{ top: 690 }}>
         <Image src="/images/line10.svg" width={15} height={162} alt="line" />
       </div>
+      <div className="hidden lg:block absolute line11">
+        <Image src="/images/line11.svg" width={15} height={162} alt="line" />
+      </div>
+      <div className="hidden lg:block absolute line12">
+        <Image src="/images/line11.svg" width={15} height={162} alt="line" />
+      </div>
       <div className="">
         <Banner
           activeLang={activeLang}

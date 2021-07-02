@@ -195,8 +195,12 @@ function Header() {
             }
           >
             {
-              <div className="textGradient text-20 mr-3.5">
-                {walletIsConnected ? "0x56u7i..." : "Connect"}
+              <div className="textGradient text-16 lg:text-20 mr-3.5">
+                {walletIsConnected ? (
+                  <div>0x56u7i...</div>
+                ) : (
+                  <div className="font-semibold">Connect</div>
+                )}
               </div>
             }
             <Image

@@ -86,16 +86,16 @@ function HotBids() {
     <div className="">
       <div className="rounded-12 bg-darkGray2 p-6 border border-solid border-white">
         <div className="flex justify-between text-white">
-          <div className="">{bid.name}</div>
+          <div className="text-16 md:text-18 font-semibold">{bid.name}</div>
           <div className="opacity-75">{bid.timer}</div>
         </div>
-        <div className="flex justify-center items-center slider-pic pt-8">
+        <div className="flex justify-center items-center slider-pic pt-6">
           <Image src={bid.pic} width={276} height={260} alt="product" />
         </div>
       </div>
       <div className="rounded-t-10 rounded-b-24 bg-white mt-4 md:mt-5 p-4 xxs:p-5 flex justify-between">
         <div className="">
-          <div className="text-16 md:text-18 font-semibold">
+          <div className="text-16 md:text-18">
             {t[locale].hotBids.highestBid}:
           </div>
           <div className="flex items-center">
@@ -132,12 +132,12 @@ function HotBids() {
 
   return (
     <div className="hot-birds container">
-      <div className="text-34 font-semibold text-white mt-31">
+      <div className="text-20 lg:text-34 font-semibold text-white mt-31">
         {t[locale].hotBids.title}
       </div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">
         <div
-          className="absolute top-28 md:top-34 -left-2 sm:-left-10 md:-left-4 z-50"
+          className="absolute top-28 md:top-42 -left-2 sm:-left-10 md:-left-0 z-50"
           onClick={handlePrevArrow}
         >
           <Image
@@ -147,13 +147,13 @@ function HotBids() {
             alt="alt"
           />
         </div>
-        <Slider className="px-4 sm:px-0 lg:px-6" {...settings} ref={sliderRef}>
+        <Slider className="px-4 sm:px-0 lg:px-10" {...settings} ref={sliderRef}>
           {bidCards.map((bid) => (
             <BidCard key={bid.key} bid={bid} />
           ))}
         </Slider>
         <div
-          className="absolute top-28 md:top-34 -right-2 sm:-right-10 md:-right-4 z-50"
+          className="absolute top-28 md:top-42 -right-2 sm:-right-10 md:-right-0 z-50"
           onClick={handleNextArrow}
         >
           <Image

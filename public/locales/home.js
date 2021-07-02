@@ -1,7 +1,7 @@
 export default {
   en: {
     banner: {
-      title: "The World’s First NFT Based E-Commerce",
+      title: { part1: "The World’s First", part2: " NFT Based E-Commerce" },
       text: "AGOV is World's First NFT Based E-Commerce Platform aiming to connect the real world economy to the digital economy. The Goal of AGOV is to help people to find the appropriate value of marketable product in the real world economy.",
       enBtn: "English Lightpaper",
       krBtn: "Korean Lightpaper",
@@ -45,7 +45,7 @@ export default {
   },
   kr: {
     banner: {
-      title: "KR The World’s First NFT Based E-Commerce",
+      title: { part1: "KR The World’s First", part2: " NFT Based E-Commerce" },
       text: "AGOV is World's First NFT Based E-Commerce Platform aiming to connect the real world economy to the digital economy. The Goal of AGOV is to help people to find the appropriate value of marketable product in the real world economy.",
       enBtn: "English Lightpaper",
       krBtn: "Korean Lightpaper",

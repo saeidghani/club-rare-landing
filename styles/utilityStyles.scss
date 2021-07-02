@@ -49,7 +49,7 @@ input, button, select {
 .home {
   .banner {
     display: grid;
-    grid-template-columns: 1fr 480px 1fr;
+    grid-template-columns: 1fr 460px 1fr;
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
     }
@@ -92,6 +92,15 @@ input, button, select {
   }
   .line10 {
     left: calc(50% - 7px);
+  }
+
+  .line11 {
+    left: calc(50% - 7px);
+    bottom: 350px;
+  }
+  .line12 {
+    left: calc(31.5% - 7px);
+    bottom: 350px;
   }
 
   .hot-birds {
