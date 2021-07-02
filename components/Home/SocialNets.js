@@ -25,7 +25,7 @@ function SocialNets() {
       </div>
       <div
         className="grid grid-cols-2 lg:grid-cols-4 gap-x-7 lg:gap-x-0 gap-y-7 lg:gap-y-0
-                   mt-10 lg:mt-16 w-full justify-items-center mx-auto buttons-max-w"
+                   mt-10 lg:mt-16 w-full justify-items-center mx-auto buttons"
       >
         {socialNetNames?.map((i) => (
           <button

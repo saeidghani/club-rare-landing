@@ -103,6 +103,18 @@ input, button, select {
     bottom: 350px;
   }
 
+  .pre-sale {
+    .items-grid {
+      display: grid;
+      grid-template-columns: 456px 1fr;
+      grid-gap: 52px;
+      justify-items: center;
+      @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      }
+    }
+  }
+
   .hot-birds {
     .slider-pic {
       img {
@@ -130,7 +142,7 @@ input, button, select {
       border: solid 1px transparent;
     }
     .buttons {
-      max-width: 845px;
+      max-width: 850px;
       @media (max-width: 768px) {
         max-width: 329px;
       }

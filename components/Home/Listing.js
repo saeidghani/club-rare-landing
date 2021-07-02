@@ -8,7 +8,7 @@ function Listing() {
 
   return (
     <div className="container grid grid-cols-1 lg:grid-cols-2 mt-42 lg:mt-72">
-      <div className="justify-self-center self-center text-34 font-semibold text-white pl-0 lg:pl-40">
+      <div className="justify-self-center self-center text-24 lg:text-34 font-semibold text-white pl-0 lg:pl-40">
         {t[locale].listing}
       </div>
       <div className="justify-self-center lg:justify-self-start grid grid-cols-1 gap-y-4 mt-14 lg:mt-0">

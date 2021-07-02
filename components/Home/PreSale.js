@@ -14,7 +14,7 @@ export default function PreSale() {
   ];
 
   return (
-    <div className="container mt-20 lg:mt-60 z-10">
+    <div className="pre-sale container mt-20 lg:mt-60 z-10">
       <div className="flex justify-between">
         <div className="text-20 lg:text-34 text-white font-semibold">
           {t[locale].preSale.title}
@@ -31,37 +31,50 @@ export default function PreSale() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-11 gap-x-13 mt-8 lg:mt-23">
+      <div className="items-grid mt-8 lg:mt-23">
         <div
-          className="col-span-1 lg:col-span-4 bg-black rounded-12 border border-solid border-white
-           py-6 px-16 lg:py-17 lg:px-15 flex justify-center items-center"
+          className="bg-black rounded-12 border border-solid border-white
+           px-14 sm:px-16 lg:px-15 py-5 lg:py-0 flex justify-center items-center"
         >
-          <Image
-            src="/images/product.png"
-            width={334}
-            height={365}
-            alt="product"
-          />
+          <div className="hidden lg:block">
+            <Image
+              src="/images/product.png"
+              width={334}
+              height={365}
+              alt="product"
+            />
+          </div>
+          <div className="block lg:hidden">
+            <Image
+              src="/images/product.png"
+              width={200}
+              height={219}
+              alt="product"
+            />
+          </div>
         </div>
-        <div className="col-start-1 col-span-1 lg:col-start-5 lg:col-span-7">
+        <div className="">
           <div className="text-20 lg:text-28 font-semibold text-white mt-5.5 lg:mt-0">
             HERMÈS, 2019
           </div>
-          <p className="text-14 lg:text-18 text-white opacity-75 mt-2.5 lg:mt-4.5">
+          <p
+            className="text-14 lg:text-18 text-white opacity-75 mt-2.5 lg:mt-4.5"
+            style={{ lineHeight: 1.4 }}
+          >
             {t[locale].preSale.text}
           </p>
           <div
             className="text-16 lg:text-20 font-semibold text-white mt-7.5 lg:mt-4 flex justify-center items-center
-           border border-solid border-white rounded-t-40 rounded-b-10 bg-white bg-opacity-20 h-15"
+           border border-solid border-white rounded-t-40 rounded-b-10 bg-white bg-opacity-20 h-12 lg:h-15"
           >
             {t[locale].preSale.countDown}
           </div>
-          <div className="grid grid-cols-4 gap-x-4 lg:gap-x-11 mt-4 lg:mt-8">
+          <div className="grid grid-cols-4 gap-x-4 xl:gap-x-11 mt-4 lg:mt-8">
             {timers.map((t) => (
               <div
                 key={t.key}
-                className="text-white border border-solid border-white
-                 rounded-12 bg-white bg-opacity-20 flex flex-col items-center py-5"
+                className="flex flex-col justify-center text-white border border-solid border-white
+                 rounded-12 bg-white bg-opacity-20 flex flex-col items-center h-20 lg:h-34"
               >
                 <div className="text-26 lg:text-46">{t.num}</div>
                 <div className="text-14 xxs:text-16 lg:text-24 opacity-50">
@@ -70,7 +83,7 @@ export default function PreSale() {
               </div>
             ))}
           </div>
-          <div className="rounded-t-10 rounded-b-24 bg-white mt-4 lg:mt-8 p-5 flex justify-between">
+          <div className="rounded-t-10 rounded-b-24 bg-white mt-4 lg:mt-8 p-4 lg:p-5 flex justify-between">
             <div className="">
               <div className="text-16 lg:text-20 font-semibold">
                 {t[locale].preSale.HighestBid}:

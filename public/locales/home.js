@@ -7,7 +7,7 @@ export default {
       krBtn: "Korean Lightpaper",
     },
     preSale: {
-      title: "Next Sale",
+      title: "Pre Sale",
       nextSale: "Next Sale",
       text: "A Rare, Matte Bleu Marine Alligator, Deep Blue Madam, Orange H Swift, Bleu Indigo & Bleu Obscur Sombrero, Craie Epsom Leather Faubourg Sellier Birkin 20 With Palladium Hardware",
       countDown: "Count Down",

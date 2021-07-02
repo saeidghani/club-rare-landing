@@ -16,7 +16,7 @@ export default function Banner({ activeLang, onSetActiveLang }) {
       <div className="mt-7 md:mt-0">
         <div
           className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu"
-          style={{ lineHeight: 1.25 }}
+          //style={{ lineHeight: 1.25 }}
         >
           {t[locale].banner.title.part1} <br /> {t[locale].banner.title.part2}
           <br /> <span className="font-bold">Club</span> Rare

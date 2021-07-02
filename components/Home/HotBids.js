@@ -137,15 +137,25 @@ function HotBids() {
       </div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">
         <div
-          className="absolute top-28 md:top-42 -left-2 sm:-left-10 md:-left-0 z-50"
+          className="absolute top-40 md:top-42 left-0 sm:-left-4 lg:left-2 z-50"
           onClick={handlePrevArrow}
         >
-          <Image
-            src="/icons/prevArrow.svg"
-            width={57.5}
-            height={57.5}
-            alt="alt"
-          />
+          <div className="hidden lg:block">
+            <Image
+              src="/icons/prevArrow.svg"
+              width={57.5}
+              height={57.5}
+              alt="alt"
+            />
+          </div>
+          <div className="block lg:hidden">
+            <Image
+              src="/icons/prevArrow.svg"
+              width={29}
+              height={29}
+              alt="alt"
+            />
+          </div>
         </div>
         <Slider className="px-4 sm:px-0 lg:px-10" {...settings} ref={sliderRef}>
           {bidCards.map((bid) => (
@@ -153,15 +163,25 @@ function HotBids() {
           ))}
         </Slider>
         <div
-          className="absolute top-28 md:top-42 -right-2 sm:-right-10 md:-right-0 z-50"
+          className="absolute top-40 md:top-42 right-0 sm:-right-4 lg:right-2 z-50"
           onClick={handleNextArrow}
         >
-          <Image
-            src="/icons/nextArrow.svg"
-            width={57.5}
-            height={57.5}
-            alt="alt"
-          />
+          <div className="hidden lg:block">
+            <Image
+              src="/icons/nextArrow.svg"
+              width={57.5}
+              height={57.5}
+              alt="alt"
+            />
+          </div>
+          <div className="block lg:hidden">
+            <Image
+              src="/icons/nextArrow.svg"
+              width={29}
+              height={29}
+              alt="alt"
+            />
+          </div>
         </div>
       </div>
     </div>
