@@ -1,17 +1,21 @@
 import React from "react";
 import Layout from "../layout";
 import Image from "next/image";
+import t from "../public/locales/staking";
+import { useRouter } from "next/router";
 
 export default function Staking() {
+  const { locale } = useRouter();
+
   const cryptoDetails = [
     {
       key: 1,
       icon1: "/icons/crypto1.svg",
       icon2: "/icons/crypto2.svg",
       title: "AGOV - ETH",
-      description: "Deposit AGOV-ETH UNI-V2 LP Earn AGOV (100x Reward)",
+      description: `${t[locale].deposit} AGOV-ETH UNI-V2 LP ${t[locale].earn} AGOV (100x ${t[locale].reward})`,
       totalLocked: "",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
       isHot: true,
     },
@@ -20,9 +24,9 @@ export default function Staking() {
       icon1: "/icons/crypto3.svg",
       icon2: "/icons/crypto2.svg",
       title: "ANSWER - ETH",
-      description: "Deposit ANSWER-ETH UNI-V2 LP Earn AGOV (10x Reward)",
+      description: `${t[locale].deposit} AGOV-ETH UNI-V2 LP ${t[locale].earn} AGOV (100x ${t[locale].reward})`,
       totalLocked: "0",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
     },
     {
@@ -32,7 +36,7 @@ export default function Staking() {
       title: "USDC-ETH",
       description: "Deposit USDC-ETH UNI-V2 LP Earn AGOV",
       totalLocked: "0",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
     },
     {
@@ -40,9 +44,9 @@ export default function Staking() {
       icon1: "/icons/crypto1.svg",
       icon2: "/icons/crypto5.svg",
       title: "AGOV-WHINT",
-      description: "Deposit AGOV-WHINT UNI-V2 LP Earn AGOV (100x Reward)",
+      description: `${t[locale].deposit} AGOV-ETH UNI-V2 LP ${t[locale].earn} AGOV (100x ${t[locale].reward})`,
       totalLocked: "0",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
     },
     {
@@ -50,9 +54,9 @@ export default function Staking() {
       icon1: "/icons/crypto1.svg",
       icon2: "/icons/crypto3.svg",
       title: "AGOV-ANSW",
-      description: "Deposit AGOV-ANSW UNI-V2 LP Earn AGOV (10x Reward)",
+      description: `${t[locale].deposit} AGOV-ETH UNI-V2 LP ${t[locale].earn} AGOV (100x ${t[locale].reward})`,
       totalLocked: "0",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
     },
     {
@@ -60,9 +64,9 @@ export default function Staking() {
       icon1: "/icons/crypto1.svg",
       icon2: "/icons/crypto6.svg",
       title: "AGOV-SEAL",
-      description: "Deposit AGOV-SEAL UNI-V2 LP Earn AGOV (1x Reward)",
+      description: `${t[locale].deposit} AGOV-SEAL UNI-V2 LP ${t[locale].earn} AGOV (1x ${t[locale].reward})`,
       totalLocked: "0",
-      reward: "0.00 AGOV / block",
+      reward: `0.00 AGOV / ${t[locale].block}`,
       interest: "NaN%",
     },
   ];
@@ -80,10 +84,10 @@ export default function Staking() {
         <Image src="/images/staking.svg" width={192} height={148} />
       </div>
       <div className="text-34 text-white text-center mt-10">
-        Farming is Over. <br /> We Moved to Klayswap
+        {t[locale].title.part1} <br /> {t[locale].title.part2}
       </div>
       <div className="text-white opacity-75 text-center mt-6">
-        Uniswap Farming is Over. Let's meet again on Klayswap.com
+        {t[locale].text}
       </div>
       <div className="pb-20">
         <div
@@ -96,10 +100,10 @@ export default function Staking() {
           <div className="absolute -bottom-2 right-0">
             <Image src="/images/shape5.svg" width={804} height={50} />
           </div>
-          <div className="text-20 text-white">Your Available AGOV Balance</div>
+          <div className="text-20 text-white">{t[locale].available}</div>
           <div className="text-24 textGradient mt-6.5">0.00 AGOV</div>
           <div className="flex justify-between items-center mt-4 xxs:mt-8">
-            <div className="text-white">Pending Harvest</div>
+            <div className="text-white">{t[locale].pending}</div>
             <div className="flex z-10">
               <div className="text-white mr-1">0.000</div>
               <div className="text-white">AGOV</div>
@@ -134,18 +138,18 @@ export default function Staking() {
                   className="rounded-8 h-12 w-full mt-6"
                   style={{ backgroundColor: "rgba(255, 255, 255, 0.14)" }}
                 >
-                  Select
+                  {t[locale].select}
                 </button>
                 <div className="flex justify-between items-center mt-5.5">
-                  <div className="text-12 text-gray">Total Locked Value</div>
+                  <div className="text-12 text-gray">{t[locale].total}</div>
                   <div className="text-13 text-gray">{d.totalLocked} USD</div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                  <div className="text-13 text-gray">Reward</div>
+                  <div className="text-13 text-gray">{t[locale].reward}</div>
                   <div className="text-13 text-gray">{d.reward}</div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
-                  <div className="text-12 text-gray">Annual Interest(APY)</div>
+                  <div className="text-12 text-gray">{`${t[locale].interest}(APY)`}</div>
                   <div className="text-13 text-lightBlue">{d.interest}</div>
                 </div>
               </div>
@@ -158,7 +162,7 @@ export default function Staking() {
                                  absolute top-5 left-4.5"
                       style={{ transform: "rotate(-30deg)" }}
                     >
-                      HOT
+                      ${t[locale].hot}
                     </div>
                   </div>
                 </div>

@@ -6,6 +6,7 @@ import routes from "../constants/routes";
 import ConnectWalletModal from "../components/common/ConnectWalletModal";
 import MyWalletModal from "../components/common/MyWalletModal";
 import Dropdown from "../components/UI/Dropdown";
+import t from "../public/locales/header";
 
 function Header() {
   const router = useRouter();
@@ -21,12 +22,12 @@ function Header() {
   const languageOptions = [
     {
       key: "en",
-      title: "English",
+      title: t[locale].english,
       onClick: () => router.push(pathname, pathname, { locale: "en" }),
     },
     {
       key: "kr",
-      title: "Korean",
+      title: t[locale].korean,
       onClick: () => router.push(pathname, pathname, { locale: "kr" }),
     },
   ];
@@ -36,8 +37,8 @@ function Header() {
   }, []);
 
   const navItems = [
-    { key: 1, title: "Home", href: routes.home },
-    { key: 2, title: "Staking", href: routes.staking },
+    { key: 1, title: t[locale].home, href: routes.home },
+    { key: 2, title: t[locale].staking, href: routes.staking },
   ];
 
   const items = [
@@ -66,12 +67,12 @@ function Header() {
     },
     {
       key: 2,
-      title: "Home",
+      title: t[locale].home,
       onClick: () => router.push(routes.home),
     },
     {
       key: 3,
-      title: "Stacking",
+      title: t[locale].staking,
       onClick: () => router.push(routes.staking),
     },
   ];
@@ -80,7 +81,7 @@ function Header() {
     <div className={wrapperClass} onClick={() => router.push(routes.home)}>
       <div className="flex items-center cursor-pointer">
         <Image src="/icons/logo.svg" width={101} height={34} alt="" />
-        <div className="md:hidden pt-2">
+        <div className="lg:hidden pt-2">
           <Image
             onClick={() => setMenuOpen(!menuOpen)}
             className={`ml-1 cursor-pointer ${
@@ -137,7 +138,7 @@ function Header() {
         >
           <Logo />
           <div
-            className="hidden md:flex justify-between text-white w-full"
+            className="hidden lg:flex justify-between text-white w-full"
             style={{ maxWidth: 146, lineHeight: 1 }}
           >
             {navItems?.map((n) => (
@@ -156,7 +157,7 @@ function Header() {
           </div>
         </div>
         <div
-          className="flex justify-end md:justify-between items-center w-full"
+          className="flex justify-end lg:justify-between items-center w-full"
           style={{ maxWidth: 207 }}
         >
           <div className="hidden lg:block">

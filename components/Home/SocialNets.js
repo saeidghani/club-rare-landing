@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import t from "../../public/locales/home";
 
 function SocialNets() {
+  const { locale } = useRouter();
+
   const socialNetNames = [
     { key: 1, name: "Medium" },
     { key: 2, name: "Twitter" },
@@ -13,7 +17,7 @@ function SocialNets() {
     <div className="container social-nets mt-32 lg:mt-84">
       <div className="flex justify-center items-center">
         <div className="text-white text-center text-24 lg:text-34 font-semibold mr-2">
-          The AGOV Community Welcomes You
+          {t[locale].socialNets}
         </div>
         <div className="hidden lg:block">
           <Image src="/icons/3lines.svg" width={14} height={46} />

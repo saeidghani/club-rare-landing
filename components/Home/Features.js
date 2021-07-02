@@ -1,7 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import t from "../../public/locales/home";
 
 function Features() {
+  const { locale } = useRouter();
+
   return (
     <div className="features grid grid-cols-1 lg:grid-cols-6 items-center mt-34 lg:mt-80 overflow-hidden">
       <div className="lg:col-span-2 text-white text-center lg:text-left pb-7 lg:pb-28">
@@ -12,9 +16,7 @@ function Features() {
           className="text-16 lg:text-24 mt-6 px-8 lg:px-0"
           style={{ lineHeight: 1.3 }}
         >
-          No.1. Premium Select Shop that connects offline physical goods with
-          NFT in blockchain. Youn can actually touch it or enjoy it in the
-          metaverse world
+          {t[locale].features.text}
         </p>
       </div>
       <div className="lg:col-start-3 lg:col-span-4 lg:justify-self-end h-160">

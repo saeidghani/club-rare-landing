@@ -1,11 +1,15 @@
 import React from "react";
-import Image from "next/image";
 import Modal from "../UI/Modal";
+import t from "../../public/locales/header";
+import { useRouter } from "next/router";
 
 function MyWalletModal({ open, onCloseModal }) {
+  const router = useRouter();
+  const { locale } = router;
+
   const title = (
     <div className="text-24 text-white text-center font-semibold pt-9">
-      My Wallet
+      {t[locale].myWalletModal.title}
     </div>
   );
 
@@ -15,13 +19,13 @@ function MyWalletModal({ open, onCloseModal }) {
     <div className="mt-3 px-8 pb-13">
       <div className="text-center opacity-80 flex flex-col">
         <div className="flex justify-center">
-          <div className="mr-1">Address:</div>
+          <div className="mr-1">{t[locale].myWalletModal.address}:</div>
           <div className="">{walletAddress.substring(0, 19)}</div>
         </div>
         <div className="">{walletAddress.substring(19, 30)}</div>
       </div>
       <div className="flex justify-between mt-7">
-        <div className="opacity-80">Balance:</div>
+        <div className="opacity-80">{t[locale].myWalletModal.balance}:</div>
         <div className="">0 AGOV</div>
       </div>
       <div className="flex justify-center mt-14">
@@ -29,7 +33,7 @@ function MyWalletModal({ open, onCloseModal }) {
           className="rounded-12 border border-solid border-white w-full flex justify-center items-center"
           style={{ width: 212, height: 53 }}
         >
-          Sign Out
+          {t[locale].myWalletModal.signOut}
         </button>
       </div>
     </div>

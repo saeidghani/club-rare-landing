@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
+import t from "../../public/locales/home";
+import { useRouter } from "next/router";
 
-export default function Home({ activeLang, onSetActiveLang }) {
-  const { t } = useTranslation("footer");
+export default function Banner({ activeLang, onSetActiveLang }) {
+  const { locale } = useRouter();
+
   const langOptions = [
-    { key: 1, title: "Korean Lightpaper" },
-    { key: 2, title: "English Lightpaper" },
+    { key: 1, title: t[locale].banner.krBtn },
+    { key: 2, title: t[locale].banner.enBtn },
   ];
 
   return (
@@ -16,17 +18,14 @@ export default function Home({ activeLang, onSetActiveLang }) {
           className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu"
           style={{ lineHeight: 1.25 }}
         >
-          The World’s First NFT Based E-Commerce
+          {t[locale].banner.title}
           <br /> <span className="font-bold">Club</span> Rare
         </div>
         <div
           className="text-white mt-6 text-center lg:text-left"
           style={{ lineHeight: 1.35 }}
         >
-          AGOV is World's First NFT Based E-Commerce Platform aiming to connect
-          the real world economy to the digital economy. The Goal of AGOV is to
-          help people to find the appropriate value of marketable product in the
-          real world economy.
+          {t[locale].banner.text}
         </div>
       </div>
       <div className="row-start-1 lg:col-start-2">

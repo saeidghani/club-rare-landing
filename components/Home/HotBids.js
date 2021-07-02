@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { useRouter } from "next/router";
+import t from "../../public/locales/home";
 
 function HotBids() {
   const sliderRef = React.createRef();
+  const { locale } = useRouter();
 
   const settings = {
     arrows: false,
@@ -92,7 +95,9 @@ function HotBids() {
       </div>
       <div className="rounded-t-10 rounded-b-24 bg-white mt-4 md:mt-5 p-4 xxs:p-5 flex justify-between">
         <div className="">
-          <div className="text-16 md:text-18 font-semibold">Highest Bid:</div>
+          <div className="text-16 md:text-18 font-semibold">
+            {t[locale].hotBids.highestBid}:
+          </div>
           <div className="flex items-center">
             <div className="text-16 md:text-18 font-semibold mr-1">
               {bid.num}
@@ -104,7 +109,7 @@ function HotBids() {
           </div>
         </div>
         <button className="text-16 md:text-18 text-white bg-blue rounded-10 rounded-br-24 px-4 xxs:px-7.5 py-3">
-          Place a Bid
+          {t[locale].hotBids.placeABid}
         </button>
       </div>
     </div>
@@ -122,7 +127,9 @@ function HotBids() {
 
   return (
     <div className="hot-birds container">
-      <div className="text-34 font-semibold text-white mt-31">Hot Bids</div>
+      <div className="text-34 font-semibold text-white mt-31">
+        {t[locale].hotBids.title}
+      </div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">
         <div
           className="absolute top-28 md:top-34 -left-2 sm:-left-10 md:-left-4 z-50"

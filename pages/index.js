@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Layout from "../layout";
 import Banner from "../components/Home/Banner";
@@ -12,9 +12,26 @@ import HotBids from "../components/Home/HotBids";
 
 export default function Home() {
   const [activeLang, setActiveLang] = useState(1);
+  const [line4Class, setLine4Class] = useState("");
+  const [line7Class, setLine7Class] = useState("");
+  const [line9Class, setLine9Class] = useState("");
+
+  const line4Ref = React.createRef();
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setLine4Class("moveDown");
+      setLine7Class("moveLeft");
+      setLine9Class("moveLeft");
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <Layout mainClass="home pt-12 lg:pt-22.5">
+      {/*<div className="vLine"></div>*/}
       <div className="hidden lg:block absolute top-0" style={{ left: "50%" }}>
         <Image src="/images/line1.svg" width={2} height={5269} />
       </div>
@@ -24,7 +41,10 @@ export default function Home() {
       <div className="hidden lg:block absolute top-0" style={{ left: "20%" }}>
         <Image src="/images/line3.svg" width={1} height={637} />
       </div>
-      <div className="hidden lg:block absolute top-21 line4">
+      <div
+        className={`hidden lg:block absolute line4 ${line4Class}`}
+        ref={line4Ref}
+      >
         <Image src="/images/line4.svg" width={15} height={162} />
       </div>
       <div className="absolute top-0" style={{ left: "64.4%" }}>
@@ -33,16 +53,13 @@ export default function Home() {
       <div className="hidden lg:block absolute" style={{ top: 393, right: 0 }}>
         <Image src="/images/line6.svg" width={483} height={1} />
       </div>
-      <div
-        className="hidden lg:block absolute"
-        style={{ right: 365, top: 401 }}
-      >
+      <div className={`hidden lg:block absolute line7 ${line7Class}`}>
         <Image src="/images/line7.svg" width={162} height={15} />
       </div>
       <div className="absolute line8">
         <Image src="/images/line8.svg" width={1435} height={1} />
       </div>
-      <div className="absolute line9">
+      <div className={`absolute line9 ${line9Class}`}>
         <Image src="/images/line9.svg" width={162} height={15} />
       </div>
       <div className="hidden lg:block absolute line10" style={{ top: 690 }}>

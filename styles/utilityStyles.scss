@@ -57,6 +57,19 @@ input, button, select {
 
   .line4 {
     left: calc(20% - 7px);
+    top: 84px;
+    &.moveDown {
+      top: 90%;
+    }
+    transition: all 20s;
+  }
+  .line7 {
+    right: 0;
+    top: 401px;
+    &.moveLeft {
+      right: 365px;
+    }
+    transition: all 4s;
   }
   .line8 {
     right: 0;
@@ -67,8 +80,12 @@ input, button, select {
     }
   }
   .line9 {
-    left: 70px;
+    left: 1400px;
     top: 627px;
+    &.moveLeft {
+      left: 70px;
+    }
+    transition: all 6s;
     @media (max-width: 1024px) {
       top: 501px;
     }
@@ -109,6 +126,15 @@ input, button, select {
         max-width: 329px;
       }
     }
+  }
+  .vLine {
+    border-left: 6px solid green;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+    //background-color: rgba(255, 255, 255, 0.4);
   }
 }
 
