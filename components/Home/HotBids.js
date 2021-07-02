@@ -90,7 +90,7 @@ function HotBids() {
           <div className="opacity-75">{bid.timer}</div>
         </div>
         <div className="flex justify-center items-center slider-pic pt-8">
-          <Image src={bid.pic} width={276} height={260} />
+          <Image src={bid.pic} width={276} height={260} alt="product" />
         </div>
       </div>
       <div className="rounded-t-10 rounded-b-24 bg-white mt-4 md:mt-5 p-4 xxs:p-5 flex justify-between">
@@ -102,7 +102,12 @@ function HotBids() {
             <div className="text-16 md:text-18 font-semibold mr-1">
               {bid.num}
             </div>
-            <Image src="/icons/crypto.svg" width={12} height={18} />
+            <Image
+              src="/icons/crypto.svg"
+              width={12}
+              height={18}
+              alt="crypto"
+            />
             <div className="text-14 md:text-14 opacity-50 ml-3">
               ${bid.price}
             </div>
@@ -135,7 +140,12 @@ function HotBids() {
           className="absolute top-28 md:top-34 -left-2 sm:-left-10 md:-left-4 z-50"
           onClick={handlePrevArrow}
         >
-          <Image src="/icons/prevArrow.svg" width={57.5} height={57.5} />
+          <Image
+            src="/icons/prevArrow.svg"
+            width={57.5}
+            height={57.5}
+            alt="alt"
+          />
         </div>
         <Slider className="px-4 sm:px-0 lg:px-6" {...settings} ref={sliderRef}>
           {bidCards.map((bid) => (
@@ -146,7 +156,12 @@ function HotBids() {
           className="absolute top-28 md:top-34 -right-2 sm:-right-10 md:-right-4 z-50"
           onClick={handleNextArrow}
         >
-          <Image src="/icons/nextArrow.svg" width={57.5} height={57.5} />
+          <Image
+            src="/icons/nextArrow.svg"
+            width={57.5}
+            height={57.5}
+            alt="alt"
+          />
         </div>
       </div>
     </div>

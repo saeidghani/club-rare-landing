@@ -29,7 +29,12 @@ export default function Banner({ activeLang, onSetActiveLang }) {
         </div>
       </div>
       <div className="row-start-1 lg:col-start-2">
-        <Image src="/images/octagon.svg" width={461} height={463} alt="" />
+        <Image
+          src="/images/octagon.svg"
+          width={461}
+          height={463}
+          alt="octagon"
+        />
       </div>
       <div className="flex flex-col xxs:flex-row lg:flex-col space-y-4 xxs:space-y-0 lg:space-y-20 xxs:space-x-3 lg:space-x-0 mt-11.5 lg:mt-0">
         {langOptions?.map((i) => (

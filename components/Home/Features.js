@@ -22,10 +22,20 @@ function Features() {
       <div className="lg:col-start-3 lg:col-span-4 lg:justify-self-end h-160">
         <div className="flex justify-center pl-8 lg:pl-0">
           <div className="-mr-100 lg:-mr-28 mt-40 z-10">
-            <Image src="/images/mobileLanding.png" width={220} height={429} />
+            <Image
+              src="/images/mobileLanding.png"
+              width={220}
+              height={429}
+              alt="mobile landing"
+            />
           </div>
           <div className="relative left-80 lg:left-0">
-            <Image src="/images/desktopLanding.png" width={699} height={533} />
+            <Image
+              src="/images/desktopLanding.png"
+              width={699}
+              height={533}
+              alt="desktop landing"
+            />
           </div>
         </div>
       </div>

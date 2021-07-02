@@ -80,7 +80,7 @@ function Header() {
   const Logo = ({ isOnDrawer, wrapperClass }) => (
     <div className={wrapperClass} onClick={() => router.push(routes.home)}>
       <div className="flex items-center cursor-pointer">
-        <Image src="/icons/logo.svg" width={101} height={34} alt="" />
+        <Image src="/icons/logo.svg" width={101} height={34} alt="logo" />
         <div className="lg:hidden pt-2">
           <Image
             onClick={() => setMenuOpen(!menuOpen)}
@@ -90,7 +90,7 @@ function Header() {
             src="/icons/arrow.svg"
             width={24}
             height={24}
-            alt=""
+            alt="arrow"
           />
         </div>
       </div>

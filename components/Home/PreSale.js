@@ -23,7 +23,12 @@ export default function PreSale() {
           <div className="text-16 lg:text-18 font-semibold textGradient mr-1.5">
             {t[locale].preSale.nextSale}
           </div>
-          <Image src="/icons/arrowColorful.svg" width={26} height={26} />
+          <Image
+            src="/icons/arrowColorful.svg"
+            width={26}
+            height={26}
+            alt="arrow"
+          />
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-11 gap-x-13 mt-8 lg:mt-23">
@@ -31,7 +36,12 @@ export default function PreSale() {
           className="col-span-1 lg:col-span-4 bg-black rounded-12 border border-solid border-white
            py-6 px-16 lg:py-17 lg:px-15 flex justify-center items-center"
         >
-          <Image src="/images/product.png" width={334} height={365} />
+          <Image
+            src="/images/product.png"
+            width={334}
+            height={365}
+            alt="product"
+          />
         </div>
         <div className="col-start-1 col-span-1 lg:col-start-5 lg:col-span-7">
           <div className="text-20 lg:text-28 font-semibold text-white mt-5.5 lg:mt-0">
@@ -67,7 +77,12 @@ export default function PreSale() {
               </div>
               <div className="flex items-center">
                 <div className="text-16 lg:text-20 font-semibold mr-1">3</div>
-                <Image src="/icons/crypto.svg" width={12} height={18} />
+                <Image
+                  src="/icons/crypto.svg"
+                  width={12}
+                  height={18}
+                  alt="crypto"
+                />
                 <div className="text-14 lg:text-20 opacity-50 ml-3">
                   $20,000
                 </div>

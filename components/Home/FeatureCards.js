@@ -27,25 +27,55 @@ function FeatureCards() {
       {isFirst ? (
         <>
           <div className="absolute top-0 right-0">
-            <Image src="/images/shape1.svg" width={76} height={114} />
+            <Image
+              src="/images/shape1.svg"
+              width={76}
+              height={114}
+              alt="shape"
+            />
           </div>
           <div className="absolute top-0 right-0">
-            <Image src="/images/shape2.svg" width={271} height={180} />
+            <Image
+              src="/images/shape2.svg"
+              width={271}
+              height={180}
+              alt="shape"
+            />
           </div>
           <div className="absolute -bottom-2 right-0">
-            <Image src="/images/shape3.svg" width={242} height={21} />
+            <Image
+              src="/images/shape3.svg"
+              width={242}
+              height={21}
+              alt="shape"
+            />
           </div>
         </>
       ) : (
         <>
           <div className="absolute top-0 left-0">
-            <Image src="/images/shape6.svg" width={28} height={317} />
+            <Image
+              src="/images/shape6.svg"
+              width={28}
+              height={317}
+              alt="shape"
+            />
           </div>
           <div className="absolute top-0 right-0">
-            <Image src="/images/shape7.svg" width={138} height={230} />
+            <Image
+              src="/images/shape7.svg"
+              width={138}
+              height={230}
+              alt="shape"
+            />
           </div>
           <div className="absolute -bottom-2 right-0">
-            <Image src="/images/shape8.svg" width={135} height={138} />
+            <Image
+              src="/images/shape8.svg"
+              width={135}
+              height={138}
+              alt="shape"
+            />
           </div>
         </>
       )}

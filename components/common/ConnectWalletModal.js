@@ -24,7 +24,12 @@ function ConnectWalletModal({ open, onCloseModal }) {
           className="rounded-12 border border-solid border-white w-full flex justify-center items-center"
           style={{ width: 239, height: 53 }}
         >
-          <Image src="/images/metatask.png" width={102} height={32} alt="" />
+          <Image
+            src="/images/metatask.png"
+            width={102}
+            height={32}
+            alt="metatask"
+          />
         </button>
         <button
           className="mt-4 rounded-12 border border-solid border-white w-full flex justify-center items-center"
@@ -34,7 +39,7 @@ function ConnectWalletModal({ open, onCloseModal }) {
             src="/images/connectWallet.png"
             width={130}
             height={21}
-            alt=""
+            alt="connect wallet"
           />
         </button>
       </div>

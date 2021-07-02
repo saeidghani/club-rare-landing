@@ -20,7 +20,7 @@ function SocialNets() {
           {t[locale].socialNets}
         </div>
         <div className="hidden lg:block">
-          <Image src="/icons/3lines.svg" width={14} height={46} />
+          <Image src="/icons/3lines.svg" width={14} height={46} alt="3 lines" />
         </div>
       </div>
       <div

@@ -81,7 +81,12 @@ export default function Staking() {
   return (
     <Layout mainClass="staking relative container">
       <div className="flex justify-center">
-        <Image src="/images/staking.svg" width={192} height={148} />
+        <Image
+          src="/images/staking.svg"
+          width={192}
+          height={148}
+          alt="staking"
+        />
       </div>
       <div className="text-34 text-white text-center mt-10">
         {t[locale].title.part1} <br /> {t[locale].title.part2}
@@ -95,10 +100,20 @@ export default function Staking() {
           style={{ height: 211 }}
         >
           <div className="absolute top-0 left-0">
-            <Image src="/images/shape4.svg" width={834} height={77} />
+            <Image
+              src="/images/shape4.svg"
+              width={834}
+              height={77}
+              alt="shape"
+            />
           </div>
           <div className="absolute -bottom-2 right-0">
-            <Image src="/images/shape5.svg" width={804} height={50} />
+            <Image
+              src="/images/shape5.svg"
+              width={804}
+              height={50}
+              alt="shape"
+            />
           </div>
           <div className="text-20 text-white">{t[locale].available}</div>
           <div className="text-24 textGradient mt-6.5">0.00 AGOV</div>
@@ -112,17 +127,14 @@ export default function Staking() {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 lg:gap-x-11.5 gap-y-6.5 lg:gap-y-12 mt-11.5">
           {cryptoDetails?.map((d) => (
-            <div className="relative">
-              <div
-                key={d.key}
-                className="bg-darkGray2 rounded-12 py-6 px-7 h-full"
-              >
+            <div key={d.key} className="relative">
+              <div className="bg-darkGray2 rounded-12 py-6 px-7 h-full">
                 <div className="flex items-center justify-center">
                   <div className="mr-2">
-                    <Image src={d.icon1} width={60} height={60} />
+                    <Image src={d.icon1} width={60} height={60} alt="icon" />
                   </div>
                   <div>
-                    <Image src={d.icon2} width={60} height={60} />
+                    <Image src={d.icon2} width={60} height={60} alt="icon" />
                   </div>
                 </div>
                 <div className="text-white text-20 font-semibold text-center mt-6">
@@ -156,7 +168,12 @@ export default function Staking() {
               {d.isHot && (
                 <div className="absolute -top-4.5 -left-4">
                   <div className="relative">
-                    <Image src="/icons/hot.svg" width={65} height={63} />
+                    <Image
+                      src="/icons/hot.svg"
+                      width={65}
+                      height={63}
+                      alt="hot"
+                    />
                     <div
                       className="text-white text-14 font-semibold
                                  absolute top-5 left-4.5"
