@@ -56,12 +56,12 @@ input, button, select {
   }
 
   .line4 {
-    left: calc(20% - 7px);
-    top: 84px;
-    &.moveDown {
-      top: 90%;
+     left: calc(20% - 7px);
+     top: 90%;
+    &.moveUp {
+     top: 84px;
     }
-    transition: all 20s;
+    transition: all 5s;
   }
   .line7 {
     right: 0;
@@ -91,7 +91,12 @@ input, button, select {
     }
   }
   .line10 {
+    top: 0;
     left: calc(50% - 7px);
+    transition: all 6s;
+    &.moveDown {
+     top: 690px;
+    }
   }
 
   .line11 {

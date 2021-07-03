@@ -15,15 +15,17 @@ export default function Home() {
   const [line4Class, setLine4Class] = useState("");
   const [line7Class, setLine7Class] = useState("");
   const [line9Class, setLine9Class] = useState("");
+  const [line10Class, setLine10Class] = useState("");
 
   const line4Ref = React.createRef();
 
   useEffect(() => {
     let timer = setTimeout(() => {
-      setLine4Class("moveDown");
+      setLine4Class("moveUp");
       setLine7Class("moveLeft");
       setLine9Class("moveLeft");
-    }, 1000);
+      setLine10Class("moveDown");
+    }, 500);
     return () => {
       clearTimeout(timer);
     };
@@ -31,7 +33,6 @@ export default function Home() {
 
   return (
     <Layout mainClass="home pt-12 lg:pt-22.5">
-      {/*<div className="vLine"></div>*/}
       <div className="hidden lg:block absolute top-0" style={{ left: "50%" }}>
         <Image src="/images/line1.svg" width={2} height={5269} alt="line" />
       </div>
@@ -62,7 +63,7 @@ export default function Home() {
       <div className={`absolute line9 ${line9Class}`}>
         <Image src="/images/line9.svg" width={162} height={15} alt="line" />
       </div>
-      <div className="hidden lg:block absolute line10" style={{ top: 690 }}>
+      <div className={`hidden lg:block absolute line10 ${line10Class}`}>
         <Image src="/images/line10.svg" width={15} height={162} alt="line" />
       </div>
       <div className="hidden lg:block absolute line11">
