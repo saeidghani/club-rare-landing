@@ -63,14 +63,6 @@ input, button, select {
     }
     transition: all 5s;
   }
-  .line7 {
-    right: 0;
-    top: 401px;
-    &.moveLeft {
-      right: 365px;
-    }
-    transition: all 4s;
-  }
   .line8 {
     right: 0;
     left: 0;
@@ -103,9 +95,24 @@ input, button, select {
     left: calc(50% - 7px);
     bottom: 350px;
   }
-  .line12 {
-    left: calc(31.5% - 7px);
-    bottom: 350px;
+
+  .banner {
+    .line7 {
+      opacity: 0;
+      left: -158px;
+      &--btn1 {
+       top: 22px;
+      }
+      &--btn2 {
+       top: 168px;
+      }
+    }
+    .btn-1:hover .line7--btn1 {
+      opacity: 1;
+    }
+    .btn-2:hover .line7--btn2 {
+      opacity: 1;
+    }
   }
 
   .pre-sale {
@@ -141,6 +148,41 @@ input, button, select {
     }
   }
 
+  .listing {
+    .line12 {
+      position: absolute;
+      top: 200px;
+      right: 0;
+      left: 0;
+      @media (max-width: 1024px) {
+        right: 0;
+        left: -800px;
+        top: 313px;
+      }
+    }
+    .line13 {
+      position: absolute;
+      left: 37%;
+      top: 207px;
+      @media (max-width: 1280px) {
+        left: 35%;
+        top: 207px;
+      }
+      @media (max-width: 1024px) {
+        left: 0;
+        top: 320px;
+      }
+      @media (max-width: 640px) {
+        left: -70px;
+        top: 320px;
+      }
+      @media (max-width: 420px) {
+        left: -100px;
+        top: 320px;
+      }
+    }
+  }
+
   .social-nets {
     button{
       background: linear-gradient(#35383D, #35383D) padding-box, linear-gradient(98.8deg, #EC6F62 0%, #A97C9A 97.17%) border-box;
@@ -152,15 +194,6 @@ input, button, select {
         max-width: 329px;
       }
     }
-  }
-  .vLine {
-    border-left: 6px solid green;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
-    //background-color: rgba(255, 255, 255, 0.4);
   }
 }
 

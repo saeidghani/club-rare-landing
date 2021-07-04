@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import t from "../../public/locales/home";
 import { useRouter } from "next/router";
+import t from "../../public/locales/home";
+import Layout from "../../layout";
 
 export default function Banner({ activeLang, onSetActiveLang }) {
   const { locale } = useRouter();
@@ -36,19 +37,37 @@ export default function Banner({ activeLang, onSetActiveLang }) {
           alt="octagon"
         />
       </div>
-      <div className="flex flex-col xxs:flex-row lg:flex-col space-y-4 xxs:space-y-0 lg:space-y-20 xxs:space-x-3 lg:space-x-0 mt-11.5 lg:mt-0">
-        {langOptions?.map((i) => (
-          <button
-            key={i.key}
-            className={`border border-solid border-white rounded-12 text-16 lg:text-22 font-light text-white 
-              bg-white w-40 lg:w-60 h-12 lg:h-16 ${
-                activeLang === i.key ? "bg-opacity-10" : "bg-opacity-0"
-              }`}
-            onClick={() => onSetActiveLang(i.key)}
-          >
-            {i.title}
-          </button>
-        ))}
+      <div className="relative">
+        <div className="flex flex-col xxs:flex-row lg:flex-col space-y-4 xxs:space-y-0 lg:space-y-20 xxs:space-x-3 lg:space-x-0 mt-11.5 lg:mt-0">
+          {langOptions?.map((i, index) => (
+            <div className={`btn-${index + 1}`}>
+              <button
+                key={i.key}
+                className="border border-solid border-white rounded-12 text-16 lg:text-22 font-light text-white
+              bg-white w-40 lg:w-60 h-12 lg:h-16 bg-opacity-0 hover:bg-opacity-10"
+                onClick={() => {}}
+              >
+                {i.title}
+              </button>
+              <div className="hidden lg:block absolute line7 line7--btn1">
+                <Image
+                  src="/images/line7.svg"
+                  width={162}
+                  height={15}
+                  alt="line"
+                />
+              </div>
+              <div className="hidden lg:block absolute line7 line7--btn2">
+                <Image
+                  src="/images/line7.svg"
+                  width={162}
+                  height={15}
+                  alt="line"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
