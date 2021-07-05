@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Ubuntu:wght@400;300;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Ubuntu:wght@400;300;700&display=swap');
 
 body {
   background-color: #1F2228;
@@ -162,10 +162,22 @@ input, button, select {
     }
     .line13 {
       position: absolute;
-      left: 37%;
+      left: 41%;
       top: 207px;
+      @media (max-width: 1800px) {
+        left: 39%;
+        top: 207px;
+      }
+      @media (max-width: 1410px) {
+        left: 37%;
+        top: 207px;
+      }
       @media (max-width: 1280px) {
         left: 35%;
+        top: 207px;
+      }
+      @media (max-width: 1120px) {
+        left: 33%;
         top: 207px;
       }
       @media (max-width: 1024px) {

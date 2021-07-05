@@ -40,9 +40,8 @@ export default function Banner({ activeLang, onSetActiveLang }) {
       <div className="relative">
         <div className="flex flex-col xxs:flex-row lg:flex-col space-y-4 xxs:space-y-0 lg:space-y-20 xxs:space-x-3 lg:space-x-0 mt-11.5 lg:mt-0">
           {langOptions?.map((i, index) => (
-            <div className={`btn-${index + 1}`}>
+            <div className={`btn-${index + 1}`} key={i.key}>
               <button
-                key={i.key}
                 className="border border-solid border-white rounded-12 text-16 lg:text-22 font-light text-white
               bg-white w-40 lg:w-60 h-12 lg:h-16 bg-opacity-0 hover:bg-opacity-10"
                 onClick={() => {}}

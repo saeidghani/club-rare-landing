@@ -10,6 +10,7 @@ const initialLogos = [
     height: 98,
     alt: "coinGecko logo",
     src: "/logos/coinGeckoLogo.svg",
+    url: "https://www.google.com/",
   },
   {
     key: 2,
@@ -17,6 +18,7 @@ const initialLogos = [
     height: 98,
     alt: "bithumb logo",
     src: "/logos/bithumbLogo.svg",
+    url: "https://www.google.com/",
   },
   {
     key: 3,
@@ -24,6 +26,7 @@ const initialLogos = [
     height: 198,
     alt: "dapp logo",
     src: "/logos/dappLogo.svg",
+    url: "https://www.google.com/",
   },
   {
     key: 4,
@@ -31,6 +34,7 @@ const initialLogos = [
     height: 98,
     alt: "dapp logo",
     src: "/logos/coinMarketCapLogo.svg",
+    url: "https://www.google.com/",
   },
   {
     key: 5,
@@ -38,6 +42,7 @@ const initialLogos = [
     height: 98,
     alt: "klaySwapLogo",
     src: "/logos/klaySwapLogo.svg",
+    url: "https://www.google.com/",
   },
 ];
 
@@ -77,11 +82,14 @@ function Listing() {
         >
           {t[locale].listing}
         </div>
-        <div className="justify-self-center lg:justify-self-start lg:self-start bg-pink-500 mt-14 lg:mt-0 relative w-60">
-          {initialLogos.map(({ key, width, height, alt, src }, index) => (
+        <div className="justify-self-center lg:justify-self-start lg:self-start mt-14 lg:mt-0 relative w-60">
+          {initialLogos.map(({ key, width, height, alt, src, url }, index) => (
             <div
               key={key}
               onClick={() => {
+                if (logoOrderKeys.indexOf(key) === 2) {
+                  window.open(url, "_blank").focus();
+                }
                 const newLogoOrderKeys = shift(
                   logoOrderKeys,
                   logoOrderKeys.indexOf(key) > 2 ? 0 : 1,
@@ -111,7 +119,11 @@ function Listing() {
                     : key === logoOrderKeys[1] || key === logoOrderKeys[3]
                     ? 76
                     : 114,
-                opacity: 1,
+                opacity: [0, 4].includes(logoOrderKeys.indexOf(key))
+                  ? 0.3
+                  : [1, 3].includes(logoOrderKeys.indexOf(key))
+                  ? 0.45
+                  : 1,
               }}
             >
               <Image src={src} width={width} height={height} alt={alt} />
