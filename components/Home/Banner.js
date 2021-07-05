@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import t from "../../public/locales/home";
-import Layout from "../../layout";
 
-export default function Banner({ activeLang, onSetActiveLang }) {
+export default function Banner() {
   const { locale } = useRouter();
 
   const langOptions = [
@@ -15,11 +14,13 @@ export default function Banner({ activeLang, onSetActiveLang }) {
   return (
     <div className="banner container justify-items-center items-center">
       <div className="mt-7 md:mt-0">
-        <div
-          className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu"
-          //style={{ lineHeight: 1.25 }}
-        >
+        <div className="text-24 lg:text-34 text-white text-center lg:text-left font-light font-Ubuntu">
           {t[locale].banner.title.part1} <br /> {t[locale].banner.title.part2}
+          {t[locale].banner.title.part3 && (
+            <>
+              <br /> <span>{t[locale].banner.title.part3}</span>
+            </>
+          )}
           <br /> <span className="font-bold">Club</span> Rare
         </div>
         <div

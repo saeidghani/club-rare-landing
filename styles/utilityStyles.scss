@@ -66,14 +66,14 @@ input, button, select {
   .line8 {
     right: 0;
     left: 0;
-    top: 620px;
+    top: 635px;
     @media (max-width: 1024px) {
       top: 494px;
     }
   }
   .line9 {
     left: 1400px;
-    top: 627px;
+    top: 642px;
     &.moveLeft {
       left: 70px;
     }

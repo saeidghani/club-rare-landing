@@ -170,7 +170,7 @@ function Header() {
                     height={34}
                     alt="round square"
                   />
-                  <span className="absolute top-2 left-2 text-white text-13 font-semibold">
+                  <span className="absolute top-1.5 left-2 text-white text-13 font-semibold">
                     {locale.toUpperCase()}
                   </span>
                 </div>

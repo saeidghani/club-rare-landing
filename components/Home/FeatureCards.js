@@ -10,12 +10,18 @@ function FeatureCards() {
     {
       key: 1,
       title: t[locale].featureCards.card1.title,
-      text: t[locale].featureCards.card1.text,
+      text:
+        locale === "en"
+          ? t[locale].featureCards.card1.text
+          : {
+              part1: t[locale].featureCards.card1.text.part1,
+              part2: t[locale].featureCards.card1.text.part2,
+            },
     },
     {
       key: 2,
       title: t[locale].featureCards.card2.title,
-      text: t[locale].featureCards.card2.title,
+      text: t[locale].featureCards.card2.text,
     },
   ];
 
@@ -82,9 +88,22 @@ function FeatureCards() {
       <div className="text-center lg:text-left text-24 lg:text-28 font-bold">
         {title}
       </div>
-      <div className="text-center lg:text-left text-16 lg:text-20 mt-4.5">
-        {text}
-      </div>
+      {locale === "en" ? (
+        <p className="text-center lg:text-left text-16 lg:text-20 mt-4.5">
+          {text}
+        </p>
+      ) : (
+        <p className="text-center lg:text-left text-16 lg:text-20 mt-4.5">
+          {text.part1 ? (
+            <>
+              {text.part1} <br />
+              {text.part2}
+            </>
+          ) : (
+            text
+          )}
+        </p>
+      )}
     </div>
   );
 
