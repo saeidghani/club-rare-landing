@@ -54,7 +54,7 @@ export default function Staking() {
           className="text-white text-14 text-center mt-2"
           style={{ height: 62 }}
         >
-          {`${t.en.deposit} AGOV-ETH UNI-V2 LP ${t.en.earn} AGOV (100x ${t.en.reward})`}
+          {`${t[locale].deposit} AGOV-ETH UNI-V2 LP ${t[locale].earn} AGOV (100x ${t[locale].reward})`}
         </div>
         <div
           className="bg-darkGray3 py-8 rounded-12 w-full mx-auto"
@@ -65,11 +65,11 @@ export default function Staking() {
             style={{ maxWidth: 703 }}
           >
             <div className="text-center lg:text-left">
-              <div className="text-12 text-gray">{t.en.interest}(APY)</div>
+              <div className="text-12 text-gray">{t[locale].interest}(APY)</div>
               <div className="text-16 text-white font-semibold  mt-3">0%</div>
             </div>
             <div className="mt-8 lg:mt-0 text-center lg:text-left">
-              <div className="text-12 text-gray ">{t.en.totalStacked}</div>
+              <div className="text-12 text-gray ">{t[locale].totalStacked}</div>
               <div className="text-16 text-white font-semibold mt-2 lg:mt-3">
                 49,064,831.508 <span className="text-12 font-normal">AGOV</span>{" "}
                 + 0.063
@@ -89,7 +89,7 @@ export default function Staking() {
           </div>
         </div>
         <div className="text-34 font-semibold textGradient text-center mt-12">
-          {t.en.yourStaking}
+          {t[locale].yourStaking}
         </div>
         <div className="flex justify-center">
           <button
@@ -97,19 +97,21 @@ export default function Staking() {
             style={{ backgroundColor: "rgba(255, 255, 255, 0.14)", width: 264 }}
             onClick={() => {}}
           >
-            {t.en.unlockWallet}
+            {t[locale].unlockWallet}
           </button>
         </div>
-        <p className="font-semibold text-white text-18 mt-19">{t.en.text1}</p>
+        <p className="font-semibold text-white text-18 mt-19">
+          {t[locale].text1}
+        </p>
         <div className="">
           <div className="text-white text-16 font-semibold mt-14">
-            {t.en.text2}
+            {t[locale].text2}
           </div>
           <div className="text-white text-16 mt-3">
-            <span className="textGradient">AGOV-ETH</span> {t.en.text3}
+            <span className="textGradient">AGOV-ETH</span> {t[locale].text3}
           </div>
           <span className="textGradient text-15 border-b border-solid border-secondary2 mt-1">
-            {t.en.text4}
+            {t[locale].text4}
           </span>
         </div>
       </div>
