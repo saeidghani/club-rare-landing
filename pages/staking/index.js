@@ -210,7 +210,7 @@ export default function Staking() {
                       />
                       <div
                         className="text-white text-14 font-semibold
-                                 absolute top-5 left-4.5"
+                                 absolute top-5 left-3.5"
                         style={{ transform: "rotate(-30deg)" }}
                       >
                         ${t[locale].hot}
