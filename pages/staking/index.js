@@ -95,16 +95,16 @@ export default function Staking() {
 
   return (
     <Layout mainClass="staking staking-lines">
-      <div className="absolute line1">
+      <div className="hidden lg:block absolute line1">
         <Image src="/images/line8.svg" width={1600} height={1} alt="line" />
       </div>
       <div className={`absolute line2 ${line2Class}`}>
         <Image src="/images/line9.svg" width={162} height={15} alt="line" />
       </div>
-      <div className="absolute line3">
+      <div className="hidden lg:block absolute line3">
         <Image src="/images/line15.svg" width={2} height={1095} alt="line" />
       </div>
-      <div className="absolute line4">
+      <div className="hidden lg:block absolute line4">
         <Image src="/images/line14.svg" width={1} height={637} alt="line" />
       </div>
       <div className={`hidden lg:block absolute line5 ${line5Class}`}>

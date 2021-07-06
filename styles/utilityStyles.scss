@@ -225,6 +225,10 @@ input, button, select {
     top: 627px;
     &.moveLeft {
       left: 90px;
+      @media (max-width: 1024px) {
+        left: -5px;
+        top: 290px;
+      }
     }
     transition: all 4s;
   }

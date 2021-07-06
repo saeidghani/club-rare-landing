@@ -22,17 +22,17 @@ export default function Staking() {
   }, []);
 
   return (
-    <Layout mainClass="staking-detail staking-lines">
-      <div className="absolute line1">
+    <Layout mainClass="staking-detail staking-lines mb-20 lg:mb-0">
+      <div className="hidden lg:block absolute line1">
         <Image src="/images/line8.svg" width={1600} height={1} alt="line" />
       </div>
       <div className={`absolute line2 ${line2Class}`}>
         <Image src="/images/line9.svg" width={162} height={15} alt="line" />
       </div>
-      <div className="absolute line3">
+      <div className="hidden lg:block absolute line3">
         <Image src="/images/line15.svg" width={2} height={1095} alt="line" />
       </div>
-      <div className="absolute line4">
+      <div className="hidden lg:block absolute line4">
         <Image src="/images/line14.svg" width={1} height={637} alt="line" />
       </div>
       <div className={`hidden lg:block absolute line5 ${line5Class}`}>
@@ -61,28 +61,30 @@ export default function Staking() {
           style={{ maxWidth: 944 }}
         >
           <div
-            className="flex justify-between mx-auto w-full"
+            className="flex flex-col lg:flex-row justify-between items-center lg:items-start mx-auto w-full"
             style={{ maxWidth: 703 }}
           >
-            <div className="">
+            <div className="text-center lg:text-left">
               <div className="text-12 text-gray">{t.en.interest}(APY)</div>
-              <div className="text-16 text-white font-semibold mt-3">0%</div>
+              <div className="text-16 text-white font-semibold  mt-3">0%</div>
             </div>
-            <div className="">
-              <div className="text-12 text-gray">{t.en.totalStacked}</div>
-              <div className="text-16 text-white font-semibold mt-3">
+            <div className="mt-8 lg:mt-0 text-center lg:text-left">
+              <div className="text-12 text-gray ">{t.en.totalStacked}</div>
+              <div className="text-16 text-white font-semibold mt-2 lg:mt-3">
                 49,064,831.508 <span className="text-12 font-normal">AGOV</span>{" "}
                 + 0.063
                 <span className="text-12 font-normal ml-1">ETH</span>
               </div>
-              <div className="text-12 text-gray mt-3">~ AGOV-ETH LP</div>
+              <div className="text-12 text-gray  mt-2 lg:mt-3">
+                ~ AGOV-ETH LP
+              </div>
             </div>
-            <div className="">
+            <div className="mt-8 lg:mt-0 text-center lg:text-left">
               <div className="text-12 text-gray">~ AGOV-ETH LP</div>
-              <div className="text-13 text-white font-semibold mt-3">
+              <div className="text-13 text-white font-semibold mt-2 lg:mt-3">
                 0.00 AGOV
               </div>
-              <div className="text-12 text-gray mt-3">≈ 0.00 USD</div>
+              <div className="text-12 text-gray mt-2 lg:mt-3">≈ 0.00 USD</div>
             </div>
           </div>
         </div>
