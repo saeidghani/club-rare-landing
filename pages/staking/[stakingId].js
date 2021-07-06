@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../layout";
 import Image from "next/image";
-import t from "../../public/locales/staking";
+import t from "../../public/locales/stakingDetails";
 import { useRouter } from "next/router";
 
 export default function Staking() {
@@ -54,7 +54,7 @@ export default function Staking() {
           className="text-white text-14 text-center mt-2"
           style={{ height: 62 }}
         >
-          Deposit AGOV-ETH UNI-V2 LP Earn AGOV (100x Reward)
+          {`${t.en.deposit} AGOV-ETH UNI-V2 LP ${t.en.earn} AGOV (100x ${t.en.reward})`}
         </div>
         <div
           className="bg-darkGray3 py-8 rounded-12 w-full mx-auto"
@@ -65,11 +65,11 @@ export default function Staking() {
             style={{ maxWidth: 703 }}
           >
             <div className="">
-              <div className="text-12 text-gray">Annual Interest(APY)</div>
+              <div className="text-12 text-gray">{t.en.interest}(APY)</div>
               <div className="text-16 text-white font-semibold mt-3">0%</div>
             </div>
             <div className="">
-              <div className="text-12 text-gray">Total Staked LP Token</div>
+              <div className="text-12 text-gray">{t.en.totalStacked}</div>
               <div className="text-16 text-white font-semibold mt-3">
                 49,064,831.508 <span className="text-12 font-normal">AGOV</span>{" "}
                 + 0.063
@@ -87,7 +87,7 @@ export default function Staking() {
           </div>
         </div>
         <div className="text-34 font-semibold textGradient text-center mt-12">
-          Your Staking
+          {t.en.yourStaking}
         </div>
         <div className="flex justify-center">
           <button
@@ -95,24 +95,19 @@ export default function Staking() {
             style={{ backgroundColor: "rgba(255, 255, 255, 0.14)", width: 264 }}
             onClick={() => {}}
           >
-            Unlock Wallet
+            {t.en.unlockWallet}
           </button>
         </div>
-        <p className="font-semibold text-white text-18 mt-19">
-          👉 Every time you stake and unstake LP tokens, the contract will
-          automatically harvest AGOV rewards for you!
-        </p>
+        <p className="font-semibold text-white text-18 mt-19">{t.en.text1}</p>
         <div className="">
           <div className="text-white text-16 font-semibold mt-14">
-            Maybe You don't know
+            {t.en.text2}
           </div>
           <div className="text-white text-16 mt-3">
-            <span className="textGradient">AGOV-ETH</span> Add liquidity to on
-            UniSwap to get UNI-V2 LP tokens. Then deposit those LP tokens on
-            AGOV to receive AGOV Token rewards
+            <span className="textGradient">AGOV-ETH</span> {t.en.text3}
           </div>
           <span className="textGradient text-15 border-b border-solid border-secondary2 mt-1">
-            Add Liquidity Link
+            {t.en.text4}
           </span>
         </div>
       </div>
