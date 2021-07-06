@@ -11,7 +11,7 @@ import t from "../public/locales/header";
 function Header() {
   const router = useRouter();
   const { pathname, query, locale } = router;
-  const [selectedWallet, setSelectedWallet] = useState({});
+
   const [selectedLang, setSelectedLang] = useState({});
   const [menuOpen, setMenuOpen] = useState(false);
   const [connectWalletOpen, setConnectWalletOpen] = useState(false);

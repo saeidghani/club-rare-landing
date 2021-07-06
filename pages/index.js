@@ -12,14 +12,12 @@ import HotBids from "../components/Home/HotBids";
 
 export default function Home() {
   const [line4Class, setLine4Class] = useState("");
-  const [line7Class, setLine7Class] = useState("");
   const [line9Class, setLine9Class] = useState("");
   const [line10Class, setLine10Class] = useState("");
 
   useEffect(() => {
     let timer = setTimeout(() => {
       setLine4Class("moveUp");
-      setLine7Class("moveLeft");
       setLine9Class("moveLeft");
       setLine10Class("moveDown");
     }, 500);
