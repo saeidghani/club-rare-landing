@@ -38,7 +38,7 @@ function Header() {
 
   const navItems = [
     { key: 1, title: t[locale].home, href: routes.home },
-    { key: 2, title: t[locale].staking, href: routes.staking },
+    { key: 2, title: t[locale].staking, href: routes.staking.index },
   ];
 
   const items = [

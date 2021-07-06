@@ -14,14 +14,14 @@ function Features() {
         </div>
         {locale === "en" ? (
           <p
-            className="text-16 lg:text-24 mt-6 px-8 lg:px-0"
+            className="text-16 lg:text-24 mt-6 px-2 sm:px-8 lg:px-0"
             style={{ lineHeight: 1.3 }}
           >
             {t[locale].features.text}
           </p>
         ) : (
           <p
-            className="text-16 lg:text-24 mt-6 px-8 lg:px-0"
+            className="text-16 lg:text-24 mt-6 px-2 sm:px-8 lg:px-0"
             style={{ lineHeight: 1.3 }}
           >
             {t[locale].features.text.part1} <br />
@@ -31,7 +31,7 @@ function Features() {
           </p>
         )}
       </div>
-      <div className="lg:col-start-3 lg:col-span-4 lg:justify-self-end h-160">
+      <div className="lg:col-start-3 lg:col-span-4 lg:justify-self-end h-160 mt-2">
         <div className="flex justify-center pl-8 lg:pl-0">
           <div className="-mr-100 lg:-mr-28 mt-40 z-10">
             <Image

@@ -52,7 +52,7 @@ export default {
       title: {
         part1: "Real world와 Metaverse",
         part2: "를 연결하는",
-        part3: "No.1 Premium shop",
+        part3: "No.1 Premium shop,",
       },
       text:
         "Club rare는 세계 최초 NFT 기반 커머스 플랫폼으로 실물 경제와 디지털 경제를 연결\n" +
@@ -62,7 +62,7 @@ export default {
       krBtn: "Korean Lightpaper",
     },
     preSale: {
-      title: "Next Sale",
+      title: "Pre Sale",
       nextSale: "Next Sale",
       text: "A Rare, Matte Bleu Marine Alligator, Deep Blue Madam, Orange H Swift, Bleu Indigo & Bleu Obscur Sombrero, Craie Epsom Leather Faubourg Sellier Birkin 20 With Palladium Hardware",
       countDown: "Count Down",

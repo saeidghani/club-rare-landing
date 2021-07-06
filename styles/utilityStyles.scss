@@ -68,7 +68,9 @@ input, button, select {
     left: 0;
     top: 635px;
     @media (max-width: 1024px) {
-      top: 494px;
+      top: 494px !important;
+      right: 0 !important;
+      left: 0 !important;
     }
   }
   .line9 {
@@ -80,6 +82,7 @@ input, button, select {
     transition: all 6s;
     @media (max-width: 1024px) {
       top: 501px;
+      left: -5px !important;
     }
   }
   .line10 {
@@ -123,6 +126,7 @@ input, button, select {
       justify-items: center;
       @media (max-width: 1024px) {
       grid-template-columns: 1fr;
+      grid-gap: 0;
       }
     }
   }
@@ -209,6 +213,40 @@ input, button, select {
   }
 }
 
+.staking-lines {
+  .line1 {
+    left: 0;
+    right: 0;
+    top: 620px;
+  }
+
+  .line2 {
+    left: 800px;
+    top: 627px;
+    &.moveLeft {
+      left: 90px;
+    }
+    transition: all 4s;
+  }
+  .line3 {
+    right: 420px;
+    top: 0;
+    bottom: 0;
+  }
+  .line4 {
+    left: 350px;
+    top: 0;
+  }
+  .line5 {
+    left: 343px;
+    top: 800px;
+    &.moveUp {
+      top: 87px;
+    }
+    transition: all 4s;
+  }
+}
+
 .staking {
   .social-nets {
       max-width: 374px;
@@ -216,5 +254,9 @@ input, button, select {
       max-width: 329px;
     }
   }
+}
+
+.staking-detail {
+  padding-bottom: 0 !important;
 }
 

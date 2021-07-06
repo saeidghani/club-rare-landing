@@ -108,7 +108,7 @@ function FeatureCards() {
   );
 
   return (
-    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-y-13 lg:gap-y-0 justify-items-center w-full mt-21 lg:mt-60">
+    <div className="container grid grid-cols-1 lg:grid-cols-2 gap-y-13 lg:gap-y-0 justify-items-center w-full mt-26 lg:mt-60">
       {featureCards?.map((f) => (
         <FeatureCard
           key={f.key}

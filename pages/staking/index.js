@@ -1,11 +1,26 @@
-import React from "react";
-import Layout from "../layout";
+import React, { useEffect, useState } from "react";
+import Layout from "../../layout";
 import Image from "next/image";
-import t from "../public/locales/staking";
+import t from "../../public/locales/staking";
 import { useRouter } from "next/router";
+import routes from "../../constants/routes";
 
 export default function Staking() {
-  const { locale } = useRouter();
+  const router = useRouter();
+  const { locale } = router;
+
+  const [line2Class, setLine2Class] = useState("");
+  const [line5Class, setLine5Class] = useState("");
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setLine2Class("moveLeft");
+      setLine5Class("moveUp");
+    }, 500);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const cryptoDetails = [
     {
@@ -79,8 +94,23 @@ export default function Staking() {
   ];
 
   return (
-    <Layout mainClass="staking relative container">
-      <div className="w-full mx-auto" style={{ maxWidth: 944 }}>
+    <Layout mainClass="staking staking-lines">
+      <div className="absolute line1">
+        <Image src="/images/line8.svg" width={1600} height={1} alt="line" />
+      </div>
+      <div className={`absolute line2 ${line2Class}`}>
+        <Image src="/images/line9.svg" width={162} height={15} alt="line" />
+      </div>
+      <div className="absolute line3">
+        <Image src="/images/line15.svg" width={2} height={1095} alt="line" />
+      </div>
+      <div className="absolute line4">
+        <Image src="/images/line14.svg" width={1} height={637} alt="line" />
+      </div>
+      <div className={`hidden lg:block absolute line5 ${line5Class}`}>
+        <Image src="/images/line4.svg" width={15} height={162} alt="line" />
+      </div>
+      <div className="container w-full mx-auto" style={{ maxWidth: 944 }}>
         <div className="flex justify-center">
           <Image
             src="/images/staking.svg"
@@ -148,8 +178,11 @@ export default function Staking() {
                     {d.description}
                   </div>
                   <button
-                    className="rounded-8 h-12 w-full mt-6"
+                    className="text-white rounded-8 h-12 w-full mt-6"
                     style={{ backgroundColor: "rgba(255, 255, 255, 0.14)" }}
+                    onClick={() =>
+                      router.push({ pathname: routes.staking.view(d.key) })
+                    }
                   >
                     {t[locale].select}
                   </button>

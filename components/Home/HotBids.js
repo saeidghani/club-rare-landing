@@ -132,7 +132,7 @@ function HotBids() {
 
   return (
     <div className="hot-birds container">
-      <div className="text-20 lg:text-34 font-semibold text-white mt-31">
+      <div className="text-20 lg:text-34 font-semibold text-white mt-25 lg:mt-31">
         {t[locale].hotBids.title}
       </div>
       <div className="slick-slides-gap relative grid grid-cols-1 mt-12">

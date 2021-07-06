@@ -7,7 +7,7 @@ function Deliverable() {
   const { locale } = useRouter();
 
   return (
-    <div className="container grid grid-cols-1 lg:grid-cols-2 mt-32 lg:mt-36">
+    <div className="container grid grid-cols-1 lg:grid-cols-2 mt-14 lg:mt-36">
       <div className="hidden lg:block mx-auto">
         <Image src="/images/circle.svg" width={350} height={361} alt="circle" />
       </div>

@@ -1,6 +1,11 @@
 const routes = {
   home: "/",
-  staking: "/staking",
+  staking: {
+    index: "/staking",
+    view(stakingId) {
+      return `staking/${stakingId}`;
+    },
+  },
 };
 
 export default routes;

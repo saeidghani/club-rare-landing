@@ -26,7 +26,9 @@ module.exports = {
         gray: "#9E9E9E",
         darkGray: "#36393E",
         darkGray2: "#35383E",
+        darkGray3: "#36393E",
         secondary: "#EC6F62",
+        secondary2: "#A97C9A",
       },
       fontSize: {
         8: "0.5rem",
